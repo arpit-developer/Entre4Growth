@@ -1,0 +1,44 @@
+.header {
+  background-color: #3498db;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo-image {
+  margin-left: 10px;
+  height: 40px;  /* Adjust the height of the logo */
+  margin-right: 10px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #f39c12;
+}
+/* #basic-nav-dropdown{
+    color: #fff;
+} */
+.ml-auto {
+  margin-left: auto !important;
+}
+/* Adjust the dropdown menu to align with the nav link */
+.nav-links .dropdown-menu {
+    left: auto;
+    right: 0;
+  }
+  
+  /* Style the dropdown items */
+  .nav-links .dropdown-item {
+    color: #333;
+  }

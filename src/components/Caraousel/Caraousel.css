@@ -1,0 +1,14 @@
+/* src/components/LandingPage.css */
+.slideshow {
+    
+    height: 10px;
+  }
+  .slideshow .carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slideshow .carousel .carousel-item img {
+    max-height: 50%; /* Make the images fit within the container's height */
+    object-fit: cover; /* Maintain the aspect ratio of the images */
+  }
