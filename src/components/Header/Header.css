@@ -7,6 +7,14 @@
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  margin-left: 15px;
+}
+.logoname{
+  font-size: 11px;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  color: black;
+  /* text-decoration: dashed; */
 }
 .logo-image {
   margin-left: 10px;

@@ -1,7 +1,10 @@
-.footer{
-    background-color: #d4d1d1;
-    padding: 15px 0;
-    color: #555;
+
+.footer {
+  background-color: #d4d1d1;
+  text-align: center;
+  padding: 15px 0;
+  /* background-color: #3b444d; */
+  color: #ffffff;
 }
 
 .footer-content {
@@ -30,9 +33,5 @@
     margin: 0;
     font-size: 14px;
   }
-  .footer{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+
+  

@@ -9,28 +9,28 @@ const teamMembers = [
     role: 'Co-founder & CEO',
     description:
       'Passionate about entrepreneurship and technology, John is dedicated to helping young entrepreneurs turn their ideas into successful businesses. He brings a wealth of experience from his previous startup ventures.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: './Arpit_bhatnagar.jpg', // Replace with actual image URL
   },
   {
     name: 'Jane Smith',
     role: 'Co-founder & COO',
     description:
       'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: './Deepak_Srivastava.jpeg', // Replace with actual image URL
   },
   {
     name: 'Michael Johnson',
     role: 'Lead Developer',
     description:
       'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: 'Ashutosh_Verma.jpeg', // Replace with actual image URL
   },
   {
     name: 'Emily Davis',
     role: 'Marketing Specialist',
     description:
       'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: 'Dipika_Borse.jpeg', // Replace with actual image URL
   },
 ];
 export const About = () => {

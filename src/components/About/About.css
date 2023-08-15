@@ -13,9 +13,9 @@
   }
   
   .team-member .card-img-top {
-    border-radius: 50%;
+    border-radius: 10%;
     width: 150px;
-    height: 150px;
+    height: 200px;
     margin: 0 auto;
     object-fit: cover;
   }

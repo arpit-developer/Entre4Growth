@@ -21,12 +21,11 @@
   .contact-us form textarea {
     resize: none;
   }
-  .map-responsive {
+  .leaflet-container {
     overflow: hidden;
     position: relative;
     background-repeat: no-repeat;
     padding-bottom: 56.25%;
-    height: '400px';
+    height: '1000px';
     width:100%;
-     /* Aspect ratio 16:9 (height / width) */
   }

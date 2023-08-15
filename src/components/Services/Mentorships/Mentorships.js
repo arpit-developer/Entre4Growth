@@ -5,3 +5,4 @@ export const Mentorships = () => {
     <div>Mentorships</div>
   )
 }
+export default Mentorships;

@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { MapContainer, TileLayer, Marker } from 'react-leaflet';
 import './Contact.css';
+import 'leaflet/dist/leaflet.css';
 
 
 export const Contact = () => {
@@ -34,13 +35,13 @@ export const Contact = () => {
           </Form>
         </Col>
         <Col md={6}>
-        <div className="map-responsive">
+        <div>
               <MapContainer center={mapCenter} zoom={13}>
                 <TileLayer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={mapCenter} />
+                <Marker position={mapCenter}>
+                </Marker>
               </MapContainer>
             </div>
           </Col>

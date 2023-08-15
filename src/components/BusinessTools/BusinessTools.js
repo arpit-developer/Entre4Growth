@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row, Col } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import "./BusinessTools.css";
 export const BusinessTools = () => {
   return (
