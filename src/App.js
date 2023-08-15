@@ -8,22 +8,38 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { About } from "./About";
+import { About } from "./components/About/About";
+import { Startups } from "./components/Services/Startups/Startups";
+import { Investors } from "./components/Services/Investors/Investors";
+import { Mentorships } from "./components/Services/Mentorships/Mentorships";
+import { Contact } from "./components/Contact/Contact";
+import { BusinessTools } from "./components/BusinessTools/BusinessTools";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <Router>
-        <Routes>
-          <Route exact path="/about" component={About} />
+        <Header/>
+        <LandingPage />
+          <Routes>
+            <Route exact path="/" render={()=>{
+            return(
+              <div>
+                <LandingPage />
+                <Caraousel />
+              </div>
+            )
+            }}/>
+            <Route path="/about" element={<About />} />
+            <Route path="/startups" element={<Startups />} />
+            <Route path="/investors" element={<Investors />} />
+            <Route path="/mentorships" element={<Mentorships />} />
+            <Route path="/businesstools" element={<BusinessTools />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
+        <Footer />
       </Router>
-
-      <Header />
-      <LandingPage />
-      <Caraousel />
       
-      <Footer />
     </div>
   );
 }

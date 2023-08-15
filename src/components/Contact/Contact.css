@@ -1,0 +1,32 @@
+.contact-us {
+    padding: 50px 0;
+  }
+  
+  .contact-us h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .contact-us form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-us form label {
+    font-weight: bold;
+  }
+  
+  .contact-us form textarea {
+    resize: none;
+  }
+  .map-responsive {
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    padding-bottom: 56.25%;
+    height: '400px';
+    width:100%;
+     /* Aspect ratio 16:9 (height / width) */
+  }

@@ -35,10 +35,12 @@
 /* Adjust the dropdown menu to align with the nav link */
 .nav-links .dropdown-menu {
     left: auto;
-    right: 0;
+    right: auto;
   }
   
   /* Style the dropdown items */
   .nav-links .dropdown-item {
     color: #333;
+    margin-left: 0;
   }
+  

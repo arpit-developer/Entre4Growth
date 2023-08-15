@@ -1,12 +1,11 @@
 import React from "react";
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
-
 import "./Header.css";
 
 export const Header = () => {
   return (
     <Navbar expand="lg" className="header">
-    <Navbar.Brand href="#home" className="logo">
+    <Navbar.Brand href="/" className="logo">
     <img src="/e-solid.svg"  // Replace with the correct path to your logo image
           alt="Logo"
           className="logo-image"/>
@@ -16,14 +15,23 @@ export const Header = () => {
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="ml-auto nav-links">
-        <Nav.Link href="/about" target="_blank">About Us</Nav.Link>
-        <NavDropdown title="Services" id="basic-nav-dropdown">
+        <Nav.Link href="/about">About Us</Nav.Link>
+        <NavDropdown title="Services" id="basic-nav-dropdown1">
         <NavDropdown.Item href="/startups">Startups</NavDropdown.Item>
         <NavDropdown.Item href="/investors">Investors</NavDropdown.Item>
-        <NavDropdown.Item href="/mentorhsip">Mentorship</NavDropdown.Item>
+        <NavDropdown.Item href="/mentorship">Mentorship</NavDropdown.Item>
         </NavDropdown>
-        <Nav.Link href="/grow">Grow</Nav.Link>
-        <NavDropdown title="Enable" id="basic-nav-dropdown">
+
+        <NavDropdown title="Grow" id="basic-nav-dropdown2">
+        <NavDropdown.Item href="/accounting">Accounting</NavDropdown.Item>
+        <NavDropdown.Item href="/financialplanning">Financial Planning</NavDropdown.Item>
+        <NavDropdown.Item href="/digitalmarketing">Digital Marketing</NavDropdown.Item>
+        <NavDropdown.Item href="/smmarketing">Social Media Marketing</NavDropdown.Item>
+        <NavDropdown.Item href="/seomarketing">SEO Marketing</NavDropdown.Item>
+        <NavDropdown.Item href="/contentmarketing">Content Marketing</NavDropdown.Item>
+        </NavDropdown>
+
+        <NavDropdown title="Enable" id="basic-nav-dropdown3">
         <NavDropdown.Item href="/courses">Courses</NavDropdown.Item>
         <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
         <NavDropdown.Divider />
