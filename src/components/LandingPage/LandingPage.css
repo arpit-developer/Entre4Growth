@@ -2,12 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50vh;
     background-color: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 20px;
 }
-heading{
+.heading{
     text-align: center;
 }
 h1{

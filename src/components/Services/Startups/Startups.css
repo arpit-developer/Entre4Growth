@@ -1,0 +1,13 @@
+.start-container{
+    margin: 20px;
+    position: relative;
+    text-align: center;   
+}
+.mid-item{
+    margin-top: 150px;
+    text-align: center;
+}
+.img-fluid{
+    border-radius: 20px;
+    margin-right: -15%;
+}
