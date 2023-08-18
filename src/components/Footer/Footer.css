@@ -3,8 +3,9 @@
   background-color: #d4d1d1;
   text-align: center;
   padding: 15px 0;
-  /* background-color: #3b444d; */
-  color: #ffffff;
+   /* background-color: #3b444d;  */
+  /* color: #ffffff; */
+  font-weight: bold;
 }
 
 .footer-content {

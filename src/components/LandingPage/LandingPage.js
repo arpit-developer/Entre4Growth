@@ -12,7 +12,7 @@ export const LandingPage = () => {
     <div className="container">
       <div className="row">
         <h1>Entre4Growth</h1>
-        <p>One Stop Platform for Budding Entreprenuers</p>
+        <p>One Stop Platform for Budding Entrepreneurs</p>
       </div>
       <div className="row">
         <div className="col-md-12 col-sm-6">
@@ -20,6 +20,7 @@ export const LandingPage = () => {
         </div>
       </div>
       <div className="row">
+        <h1>Getting Started</h1>
         <div className="col-md-4 col-sm-6">
           {/* <p>We offer amazing services for entreprenuers</p> */}
           {/*  */}
@@ -27,7 +28,7 @@ export const LandingPage = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="./card/im-3.jpg"
+                src="./account.png"
                 className="card-css"
               />
               <Card.Body>
@@ -40,9 +41,6 @@ export const LandingPage = () => {
                   </div>
                 </Card.Text>
               </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </Card.Footer>
             </Card>
           </CardGroup>
         </div>
@@ -51,7 +49,7 @@ export const LandingPage = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="./card/im-4.jpg"
+                src="./entrepreneurship.png"
                 className="card-css"
               />
               <Card.Body>
@@ -61,12 +59,9 @@ export const LandingPage = () => {
                     <Button variant="primary" size="lg">
                       <a href="/signup">Get Started</a>
                     </Button>
-                    </div>
+                  </div>
                 </Card.Text>
               </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </Card.Footer>
             </Card>
           </CardGroup>
         </div>
@@ -75,26 +70,23 @@ export const LandingPage = () => {
             <Card>
               <Card.Img
                 variant="top"
-                src="./card/im-5.jpg"
+                src="./investor.png"
                 className="card-css"
               />
               <Card.Body>
                 <Card.Title>Investor</Card.Title>
                 <Card.Text>
-                <div className="mb-3">
+                  <div className="mb-3">
                     <Button variant="primary" size="lg">
-                      <a href="/">SignUp</a>
+                      <a href="/investor-signup">SignUp</a>
                     </Button>
                     &nbsp;
                     <Button variant="primary" size="lg">
-                      <a href="/signup">Login</a>
+                      <a href="/investor-login">Login</a>
                     </Button>
-                    </div>
+                  </div>
                 </Card.Text>
               </Card.Body>
-              <Card.Footer>
-                <small className="text-muted">Last updated 3 mins ago</small>
-              </Card.Footer>
             </Card>
           </CardGroup>
         </div>

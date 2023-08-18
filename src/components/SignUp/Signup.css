@@ -21,12 +21,11 @@ h1,h2,h3,h4,h5,h6,label,span {
   justify-content: center;
   flex-direction: column;
   text-align: left;
-  margin: 10px 0 10px 0;
+  margin: 25px;
 }
 .auth-inner {
-  width: 450px;
   margin: auto;
-  background: #fff;
+  background: #c1d9e9;
   box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
   padding: 40px 55px 45px 55px;
   border-radius: 15px;
@@ -52,7 +51,26 @@ h1,h2,h3,h4,h5,h6,label,span {
   padding-top: 10px;
   color: #7f7d7d;
   margin: 0;
+  font-weight: bold;
 }
 .forgot-password a {
   color: #167bff;
+}
+.icon-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+input {
+  border: none;
+  outline: none;
 }

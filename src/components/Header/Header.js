@@ -81,8 +81,6 @@ export const Header = () => {
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Link href="/businesstools">Business Tools</Nav.Link>
-          <Nav.Link href="/signup">Signup</Nav.Link>
-          <Nav.Link href="/login">Login</Nav.Link>
           <Nav.Link href="/contact">Contact</Nav.Link>
           <Nav.Link href="/" onClick={toggleTheme}>
             <img src="/night-mode.png" alt="dark" width="22px" />

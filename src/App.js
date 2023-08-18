@@ -14,6 +14,9 @@ import { Contact } from "./components/Contact/Contact";
 import { BusinessTools } from "./components/BusinessTools/BusinessTools";
 import { Signup } from "./components/SignUp/Signup";
 import { Login } from "./components/Login/Login";
+import { InvestorLogin } from "./components/Login/Investor-Login";
+import InvestorSignup from "./components/SignUp/Investor-Signup";
+import { InvestorForgotPassword } from "./components/SignUp/Investor-Forgot-Password";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -47,6 +50,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />}/>
           <Route path="/login" element={<Login />}/>
+          <Route path="/investor-login" element={<InvestorLogin />}/>
+          <Route path="/investor-signup" element={<InvestorSignup />}/>
+          <Route path="/forgot-password" element={<InvestorForgotPassword />}/>
         </Routes>
         <Footer />
       </Router>
