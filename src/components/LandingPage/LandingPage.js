@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Caraousel } from "../Caraousel/Caraousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./LandingPage.css";

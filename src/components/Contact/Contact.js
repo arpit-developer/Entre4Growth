@@ -2,7 +2,6 @@ import React from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import {
-  BsBuildingCheck,
   BsFillPersonFill,
   BsFillEnvelopeAtFill,
   BsFillChatSquareTextFill,

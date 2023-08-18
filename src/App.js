@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Header from "./components/Header/Header";
 import { LandingPage } from "./components/LandingPage/LandingPage";
 import { Footer } from "./components/Footer/Footer";
@@ -19,19 +19,19 @@ import InvestorSignup from "./components/SignUp/Investor-Signup";
 import { InvestorForgotPassword } from "./components/SignUp/Investor-Forgot-Password";
 
 function App() {
-  const [theme, setTheme] = useState("light");
-  const toggleTheme = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  };
-  useEffect(()=>{
-    document.body.className = theme;
-  },[theme]);
+  // const [theme, setTheme] = useState("light");
+  // const toggleTheme = () => {
+  //   if (theme === 'light') {
+  //     setTheme('dark');
+  //   } else {
+  //     setTheme('light');
+  //   }
+  // };
+  // useEffect(()=>{
+  //   document.body.className = theme;
+  // },[theme]);
   return (
-    <div className={`App ${theme}`}>
+    <div className="App">
       {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
       <Router>
         <Header />
