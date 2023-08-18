@@ -35,9 +35,11 @@ export const LandingPage = () => {
                 <Card.Title>Already Have an Account?</Card.Title>
                 <Card.Text>
                   <div className="mb-3">
-                    <Button variant="primary" size="lg">
-                      <a href="/login">Login</a>
-                    </Button>
+                    <a href="/login">
+                      <Button variant="primary" size="lg">
+                        Login
+                      </Button>
+                    </a>
                   </div>
                 </Card.Text>
               </Card.Body>
@@ -56,9 +58,11 @@ export const LandingPage = () => {
                 <Card.Title>New User</Card.Title>
                 <Card.Text>
                   <div className="mb-3">
-                    <Button variant="primary" size="lg">
-                      <a href="/signup">Get Started</a>
-                    </Button>
+                    <a href="/signup">
+                      <Button variant="primary" size="lg">
+                        Get Started
+                      </Button>
+                    </a>
                   </div>
                 </Card.Text>
               </Card.Body>
@@ -77,13 +81,17 @@ export const LandingPage = () => {
                 <Card.Title>Investor</Card.Title>
                 <Card.Text>
                   <div className="mb-3">
-                    <Button variant="primary" size="lg">
-                      <a href="/investor-signup">SignUp</a>
-                    </Button>
+                    <a href="/investor-signup">
+                      <Button variant="primary" size="lg">
+                        SignUp
+                      </Button>
+                    </a>
                     &nbsp;
-                    <Button variant="primary" size="lg">
-                      <a href="/investor-login">Login</a>
-                    </Button>
+                    <a href="/investor-login">
+                      <Button variant="primary" size="lg">
+                        Login
+                      </Button>
+                    </a>
                   </div>
                 </Card.Text>
               </Card.Body>

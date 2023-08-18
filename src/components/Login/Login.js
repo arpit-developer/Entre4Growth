@@ -1,26 +1,32 @@
 import React from "react";
+import { InputGroup, FormControl } from "react-bootstrap";
+import {
+  BsFillEnvelopeAtFill,
+  BsLockFill,
+} from "react-icons/bs";
 import "../SignUp/Signup.css";
 
 export const Login = () => {
   return (
     <div className="auth-wrapper">
+      <h2>Login Page</h2>
       <form className="auth-inner">
-        <h3>Sign In</h3>
-        <div className="mb-3">
-          <label>Email address</label>
-          <input
-            type="email"
-            className="form-control"
-            placeholder="Enter email"
-          />
+        <h3>Log In</h3>
+        <div className="row">
+          <InputGroup>
+            <InputGroup.Text>
+              <BsFillEnvelopeAtFill />
+            </InputGroup.Text>
+            <FormControl placeholder="Email Address" type="email" />
+          </InputGroup>
         </div>
-        <div className="mb-3">
-          <label>Password</label>
-          <input
-            type="password"
-            className="form-control"
-            placeholder="Enter password"
-          />
+        <div className="row">
+          <InputGroup>
+            <InputGroup.Text>
+              <BsLockFill />
+            </InputGroup.Text>
+            <FormControl placeholder="Password" type="password" />
+          </InputGroup>
         </div>
         <div className="mb-3">
           <div className="custom-control custom-checkbox">
@@ -36,11 +42,14 @@ export const Login = () => {
         </div>
         <div className="d-grid">
           <button type="submit" className="btn btn-primary">
-            Submit
+            Log In
           </button>
         </div>
+        <p className="forgot-password text-left">
+        Don't have an account? <a href="/signup">Sign Up!</a>
+        </p>
         <p className="forgot-password text-right">
-          Forgot <a href="#">password?</a>
+           <a href="/forgot-password">Forgot Password?</a>
         </p>
       </form>
     </div>
