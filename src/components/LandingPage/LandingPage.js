@@ -1,39 +1,104 @@
-import React,{useState} from "react";
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-// import { Popover, OverlayTrigger, Button } from "react-bootstrap";
+import React, { useState } from "react";
 import { Caraousel } from "../Caraousel/Caraousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./LandingPage.css";
-import Signup  from "../SignUp/Signup";
-import { Login } from "../Login/Login";
+import Card from "react-bootstrap/Card";
+import CardGroup from "react-bootstrap/CardGroup";
 
-function myLogin() {
-  return (
-      <Login />
-  );
-}
+import Button from "react-bootstrap/Button";
+
 export const LandingPage = () => {
-  const [showDynamicComponent, setShowDynamicComponent] = useState(false);
-  const mySignUp = ()=> {
-    setShowDynamicComponent(true);
-  }
   return (
-    <div className="landing-page">
-      <div className="heading">
-        <h1>
-          Entre4Growth
-          <p> One Stop Platform for Budding Entreprenuers</p>
-        </h1>
-        <p>We offer amazing services for entreprenuers</p>
-        
-        <button onClick={mySignUp}>Get Started</button>
-        {/* {showDynamicComponent && <Signup />}  */}
-        &nbsp;
-        <button onClick={myLogin}>Login</button>
-        <br/>
-        <button>Register as Investor</button>
+    <div className="container">
+      <div className="row">
+        <h1>Entre4Growth</h1>
+        <p>One Stop Platform for Budding Entreprenuers</p>
       </div>
-      <Caraousel />
+      <div className="row">
+        <div className="col-md-12 col-sm-6">
+          <Caraousel />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-md-4 col-sm-6">
+          {/* <p>We offer amazing services for entreprenuers</p> */}
+          {/*  */}
+          <CardGroup>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="./card/im-3.jpg"
+                className="card-css"
+              />
+              <Card.Body>
+                <Card.Title>Already Have an Account?</Card.Title>
+                <Card.Text>
+                  <div className="mb-3">
+                    <Button variant="primary" size="lg">
+                      <a href="/login">Login</a>
+                    </Button>
+                  </div>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <CardGroup>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="./card/im-4.jpg"
+                className="card-css"
+              />
+              <Card.Body>
+                <Card.Title>New User</Card.Title>
+                <Card.Text>
+                  <div className="mb-3">
+                    <Button variant="primary" size="lg">
+                      <a href="/signup">Get Started</a>
+                    </Button>
+                    </div>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
+        </div>
+        <div className="col-md-4 col-sm-6">
+          <CardGroup>
+            <Card>
+              <Card.Img
+                variant="top"
+                src="./card/im-5.jpg"
+                className="card-css"
+              />
+              <Card.Body>
+                <Card.Title>Investor</Card.Title>
+                <Card.Text>
+                <div className="mb-3">
+                    <Button variant="primary" size="lg">
+                      <a href="/">SignUp</a>
+                    </Button>
+                    &nbsp;
+                    <Button variant="primary" size="lg">
+                      <a href="/signup">Login</a>
+                    </Button>
+                    </div>
+                </Card.Text>
+              </Card.Body>
+              <Card.Footer>
+                <small className="text-muted">Last updated 3 mins ago</small>
+              </Card.Footer>
+            </Card>
+          </CardGroup>
+        </div>
+      </div>
     </div>
   );
 };

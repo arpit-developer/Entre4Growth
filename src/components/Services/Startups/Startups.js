@@ -1,4 +1,5 @@
 import React from "react";
+import Cards from "./Cards";
 import "./Startups.css";
 
 export const Startups = () => {
@@ -86,6 +87,10 @@ export const Startups = () => {
               <div className="feature-step-info"></div>
             </div>
           </div>
+        </div>
+        <div className="row">
+          <h1>Explore Oppotunity</h1>
+          <Cards/>
         </div>
       </div>
     </div>

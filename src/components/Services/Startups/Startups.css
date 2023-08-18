@@ -4,10 +4,18 @@
     text-align: center;   
 }
 .mid-item{
-    margin-top: 150px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 45%;
 }
 .img-fluid{
     border-radius: 20px;
     margin-right: -15%;
+}
+.card-css{
+    padding: 20px;
+}
+.row{
+    margin-top: 20px;
 }

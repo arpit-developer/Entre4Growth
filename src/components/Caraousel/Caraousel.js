@@ -12,16 +12,16 @@ export const Caraousel = () => {
           <img src="/pictures/(1).jpeg"  alt="Slide 1" width="400px" />
         </div>
         <div>
-          <img src="/pictures/(3).jpeg"  alt="Slide 2" />
+          <img src="/pictures/(10).jpeg"  alt="Slide 2" />
         </div>
         <div>
-          <img src="/pictures/(5).jpeg"  alt="Slide 3" />
+          <img src="/pictures/(14).jpeg"  alt="Slide 3" />
         </div>
         <div>
-          <img src="/pictures/(8).jpeg"  alt="Slide 4" />
+          <img src="/pictures/(12).jpeg"  alt="Slide 4" />
         </div>
         <div>
-          <img src="/pictures/(11).jpeg"  alt="Slide 5" />
+          <img src="/pictures/(4).jpeg"  alt="Slide 5" />
         </div>
       </Carousel>  
       

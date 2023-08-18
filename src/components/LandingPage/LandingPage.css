@@ -1,11 +1,22 @@
-.landing-page{
-    display: flex;
+ .row {
+    text-align: center;
+ }
+ .landing-page{
+   
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
+    
     font-family: Arial, Helvetica, sans-serif;
     margin: 20px 20px;
 }
+button{
+    transition: background-color 0.3s;
+}
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+/*
 .heading{
     text-align: center;
 }
@@ -14,20 +25,16 @@ h1{
     margin: 0;
     padding: 0;
 }
+button a{
+    text-decoration: none;
+    color: #fff;
+}
 p{
     font-size: 1.2rem;
     margin: 10px 0;
     color: #666;
 }
-button{
-    background-color: #3498db;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
+
 button:hover{
     background-color: #2980b9;
-}
+} */
