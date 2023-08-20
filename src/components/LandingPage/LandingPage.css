@@ -21,6 +21,12 @@ button a{
 .card-css{
     
 }
+.main-title{
+    margin: 20px;
+    color: darkcyan;
+    font-weight: bolder;
+    line-height: 52px;
+}
 /*
 .heading{
     text-align: center;

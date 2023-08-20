@@ -9,8 +9,7 @@ export const Startups = () => {
         <div className="row">
           <div className="col-lg-6 offset-lg-3">
             <div className="section-title text-center">
-              {/* <span class="pre-title">About Funding Quest</span> */}
-              <h2>Why should you join us?</h2>
+              <h1>Why should you join us?</h1>
             </div>
           </div>
         </div>
@@ -55,7 +54,7 @@ export const Startups = () => {
             <div className="feature-step-item">
               <div className="feature-step-icon">
                 <i>
-                  <img className="img-fluid" src="/images/(4).png" alt="" />
+                  <img className="img-fluid" src="/images/4.png" alt="" />
                 </i>
               </div>
               <div className="feature-step-info">
@@ -89,7 +88,7 @@ export const Startups = () => {
           </div>
         </div>
         <div className="row">
-          <h1>Explore Oppotunity</h1>
+          <h1>Explore Opportunity</h1>
           <Cards/>
         </div>
       </div>

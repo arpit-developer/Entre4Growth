@@ -12,7 +12,7 @@ export const LandingPage = () => {
     <div className="container">
       <div className="row">
         <h1>Entre4Growth</h1>
-        <p>One Stop Platform for Budding Entrepreneurs</p>
+        <h3>One Stop Platform for Budding Entrepreneurs</h3>
       </div>
       <div className="row">
         <div className="col-md-12 col-sm-6">
@@ -20,7 +20,12 @@ export const LandingPage = () => {
         </div>
       </div>
       <div className="row">
-        <h1>Getting Started</h1>
+        <div className="main-title">
+        {/* <h1>Getting Started</h1> */}
+        <h2>
+        Join Entre4Growth on its mission to promote <br/>entrepreneurship in India
+        </h2>
+        </div>
         <div className="col-md-4 col-sm-6">
           {/* <p>We offer amazing services for entreprenuers</p> */}
           {/*  */}

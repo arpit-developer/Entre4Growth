@@ -5,8 +5,10 @@ import {
   BsFillPersonFill,
   BsFillEnvelopeAtFill,
   BsFillChatSquareTextFill,
+  BsFillPhoneFill,
 } from "react-icons/bs";
 import { InputGroup, FormControl } from "react-bootstrap";
+import Alert from "react-bootstrap/Alert";
 import "./Contact.css";
 import "leaflet/dist/leaflet.css";
 
@@ -16,6 +18,40 @@ export const Contact = () => {
     <div className="contact-us">
       <Container>
         <h1>Contact Us</h1>
+        <Row>
+          <Col md={6}>
+            <Alert variant="primary">
+              <div className="row">
+                <div className="col-md-2">
+                  <InputGroup>
+                    <BsFillEnvelopeAtFill size={50} />
+                  </InputGroup>
+                </div>
+                <div className="col-md-8">
+                  <strong>entre4growth@gmail.com</strong>
+                  <br />
+                  We will respond as soon as possible
+                </div>
+              </div>
+            </Alert>
+          </Col>
+          <Col md={6}>
+            <Alert variant="primary">
+            <div className="row">
+                <div className="col-md-2">
+              <InputGroup>
+                <BsFillPhoneFill size={50}/>
+              </InputGroup>
+              </div>
+              <div className="col-md-8">
+              <strong>+91 98765 43210</strong>
+              <br />
+              Helpline, Mon - Sat 10:30am - 6:30pm
+              </div>
+              </div>
+            </Alert>
+          </Col>
+        </Row>
         <Row>
           <Col md={6}>
             <Form>
@@ -46,9 +82,9 @@ export const Contact = () => {
                 </InputGroup>
               </div>
               <div className="row">
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
+                <Button variant="primary" type="submit">
+                  Submit
+                </Button>
               </div>
             </Form>
           </Col>
