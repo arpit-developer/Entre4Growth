@@ -1,14 +1,12 @@
 /* src/components/LandingPage.css */
 .slideshow {
-    
-    height: 10px;
+  height: 50%;
   }
-  .slideshow .carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .react-responsive-carousel .carousel .slider-wrapper {
+    height: 100px; /* Adjust the desired height */
   }
-  .slideshow .carousel .carousel-item img {
-    max-height: 50%; /* Make the images fit within the container's height */
-    object-fit: cover; /* Maintain the aspect ratio of the images */
+  
+  .react-responsive-carousel .carousel .slider-wrapper img {
+    height: 20%;
+    object-fit: cover;
   }

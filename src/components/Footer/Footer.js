@@ -9,10 +9,10 @@ export const Footer = () => {
          <footer className="footer">
       <div className="footer-content">
         <div className="social-icons">
-          <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
-          <a href="#"><FontAwesomeIcon icon={faTwitter} /></a>
-          <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
-          <a href="#"><FontAwesomeIcon icon={faLinkedin} /></a>
+          <a href="/"><FontAwesomeIcon icon={faFacebook} /></a>
+          <a href="/"><FontAwesomeIcon icon={faTwitter} /></a>
+          <a href="/"><FontAwesomeIcon icon={faInstagram} /></a>
+          <a href="/"><FontAwesomeIcon icon={faLinkedin} /></a>
         </div>
         <p>&copy; 2023 Entre4Growth. All rights reserved.</p>
       </div>

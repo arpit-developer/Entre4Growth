@@ -1,5 +1,5 @@
 .meet{
-    margin: 30px 30px;
+    margin: 20px 20px;
     color: #3498db;    
 }
 .about-us {
@@ -13,9 +13,9 @@
   }
   
   .team-member .card-img-top {
-    border-radius: 50%;
+    border-radius: 10%;
     width: 150px;
-    height: 150px;
+    height: 200px;
     margin: 0 auto;
     object-fit: cover;
   }

@@ -9,28 +9,28 @@ const teamMembers = [
     role: 'Co-founder & CEO',
     description:
       'Passionate about entrepreneurship and technology, John is dedicated to helping young entrepreneurs turn their ideas into successful businesses. He brings a wealth of experience from his previous startup ventures.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: './Arpit_bhatnagar.jpg', 
   },
   {
     name: 'Jane Smith',
     role: 'Co-founder & COO',
     description:
       'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: './Deepak_Srivastava.jpeg', 
   },
   {
     name: 'Michael Johnson',
     role: 'Lead Developer',
     description:
       'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: 'Ashutosh_Verma.jpeg', 
   },
   {
     name: 'Emily Davis',
     role: 'Marketing Specialist',
     description:
       'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
-    image: 'https://via.placeholder.com/150', // Replace with actual image URL
+    image: 'Dipika_Borse.jpeg', 
   },
 ];
 export const About = () => {
@@ -40,7 +40,7 @@ export const About = () => {
       <div className="intro">
           <h1 className='meet'>Welcome to Entre4Growth</h1>
           <p>
-            At [Entre4Growth], we are committed to empowering the next generation of entrepreneurs. Our platform provides a comprehensive set of tools, resources, and guidance to help aspiring business owners turn their ideas into successful ventures.
+            At Entre4Growth, we are committed to empowering the next generation of entrepreneurs. Our platform provides a comprehensive set of tools, resources, and guidance to help aspiring business owners turn their ideas into successful ventures.
           </p>
           <p>
             Whether you're just starting out or looking to take your startup to the next level, we have the expertise and resources to support your journey. From business planning and funding strategies to marketing and growth hacking, we've got you covered.
