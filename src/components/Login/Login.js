@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { InputGroup, FormControl } from "react-bootstrap";
 import {
   BsFillEnvelopeAtFill,
@@ -7,17 +7,52 @@ import {
 import "../SignUp/Signup.css";
 
 export const Login = () => {
+  const[formData,setFormData] =useState({
+    workemail:"",
+    passwrod:"",
+  });
+  const handleChange =(e) =>{
+    const {name,value} =e.target;
+    setFormData((prevData) =>({...prevData,[name]:value}));
+  }
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/login-user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Data sent to server:", data);
+      } else {
+        console.error("Failed to send data to server");
+      }
+    } catch (error) {
+      console.error("Error sending data:", error);
+    }
+  }
   return (
     <div className="auth-wrapper">
-      <h2>Login Page</h2>
-      <form className="auth-inner">
+       <div className="row">
+          <div className="col-lg-6 offset-lg-3">
+            <div className="section-title text-center">
+              <h1>Log In</h1>
+            </div>
+          </div>
+        </div>
+      <form className="auth-inner" onSubmit={handleSubmit}>
         <h3>Log In</h3>
         <div className="row">
           <InputGroup>
             <InputGroup.Text>
               <BsFillEnvelopeAtFill />
             </InputGroup.Text>
-            <FormControl placeholder="Email Address" type="email" />
+            <FormControl placeholder="Email Address" type="email" name="workemail" required onChange={handleChange} />
           </InputGroup>
         </div>
         <div className="row">
@@ -25,10 +60,10 @@ export const Login = () => {
             <InputGroup.Text>
               <BsLockFill />
             </InputGroup.Text>
-            <FormControl placeholder="Password" type="password" />
+            <FormControl placeholder="Password" type="password" name="password" required onChange={handleChange}/>
           </InputGroup>
         </div>
-        <div className="mb-3">
+        <div className="row">
           <div className="custom-control custom-checkbox">
             <input
               type="checkbox"

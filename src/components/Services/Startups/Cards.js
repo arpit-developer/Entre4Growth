@@ -5,9 +5,9 @@ function GroupExample() {
   return (
     <CardGroup>
       <Card>
-        <Card.Img variant="top" src="./card/im-1.jpg" className='card-css' />
+        <Card.Img variant="top" src="./card/im-2.jpg" className='card-css' />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Discover Investors</Card.Title>
           <Card.Text>
             This is a wider card with supporting text 
           </Card.Text>
@@ -19,7 +19,7 @@ function GroupExample() {
       <Card>
         <Card.Img variant="top" src="./card/im-2.png" className='card-css' />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Find Prospects</Card.Title>
           <Card.Text>
             This card has supporting text below as
           </Card.Text>
@@ -31,7 +31,7 @@ function GroupExample() {
       <Card>
         <Card.Img variant="top" src="./card/im-3.jpg" className='card-css' />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Market Research</Card.Title>
           <Card.Text>
             This is a wider card with supporting
           </Card.Text>
@@ -43,7 +43,7 @@ function GroupExample() {
       <Card>
         <Card.Img variant="top" src="./card/im-4.jpg" className='card-css' />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Enrich Your Database</Card.Title>
           <Card.Text>
             This is a wider card with supporting 
           </Card.Text>
@@ -55,7 +55,7 @@ function GroupExample() {
       <Card>
         <Card.Img variant="top" src="./card/im-5.jpg" className='card-css' />
         <Card.Body>
-          <Card.Title>Card title</Card.Title>
+          <Card.Title>Monetary Advancement</Card.Title>
           <Card.Text>
             This is a wider card with supporting 
           </Card.Text>

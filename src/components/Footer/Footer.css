@@ -6,6 +6,7 @@
    /* background-color: #3b444d;  */
   /* color: #ffffff; */
   font-weight: bold;
+  flex-shrink: 0;
 }
 
 .footer-content {

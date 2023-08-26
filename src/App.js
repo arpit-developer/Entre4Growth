@@ -17,6 +17,12 @@ import { Login } from "./components/Login/Login";
 import { InvestorLogin } from "./components/Login/Investor-Login";
 import InvestorSignup from "./components/SignUp/Investor-Signup";
 import { InvestorForgotPassword } from "./components/SignUp/Investor-Forgot-Password";
+import { Accounting } from "./components/Grow/Accounting";
+import { FinancialPlanning } from "./components/Grow/FinancialPlanning";
+import { DigitalMarketing } from "./components/Grow/DigitalMarketing";
+import { SocialMediaMarketing } from "./components/Grow/SocialMediaMarketing";
+import { SEOMarketing } from "./components/Grow/SEOMarketing";
+import { ContentMarketing } from "./components/Grow/ContentMarketing";
 
 function App() {
   // const [theme, setTheme] = useState("light");
@@ -44,9 +50,18 @@ function App() {
           <Route path="/startups" element={<Startups />} />
           <Route path="/investors" element={<Investors />} />
           <Route path="/mentorships" element={<Mentorships />} />
+          <Route path="/accounting" element={<Accounting />} />
+          
+          <Route path="/financialplanning" element={<FinancialPlanning />} />
+          <Route path="/digitalmarketing" element={<DigitalMarketing />} />
+          <Route path="/smmarketing" element={<SocialMediaMarketing />} />
+          <Route path="/seomarketing" element={<SEOMarketing />} />
+          <Route path="/contentmarketing" element={<ContentMarketing />} />
+
           <Route path="/resources" element={<Resources />} />
           <Route path="/e4gcommunity" element={<E4GCommunity />} />
           <Route path="/businesstools" element={<BusinessTools />} />
+          
           <Route path="/contact" element={<Contact />} />
           <Route path="/signup" element={<Signup />}/>
           <Route path="/login" element={<Login />}/>

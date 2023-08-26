@@ -3,7 +3,10 @@
     color: #3498db;    
 }
 .about-us {
-    padding: 50px 0;
+    padding: 30px 0;
+    text-align: center;
+  }
+  .container{
     text-align: center;
   }
   .team-member {
@@ -19,7 +22,9 @@
     margin: 0 auto;
     object-fit: cover;
   }
-  
   .role {
     color: #3498db;
+  }
+  .card-img-top{
+    padding: 10px;
   }

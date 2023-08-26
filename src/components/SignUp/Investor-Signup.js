@@ -9,6 +9,7 @@ import {
   BsLinkedin,
   BsFillPinMapFill,
   BsBuildingsFill,
+  BsLockFill,
 } from "react-icons/bs";
 
 import { InputGroup, FormControl } from "react-bootstrap";
@@ -20,16 +21,30 @@ export const InvestorSignup = () => {
   const handleCheckboxChange = () => {
     setChecked(!checked);
   };
+  const [formData, setFormData] = useState({
+    investorcompanyName: "",
+    firstName: "",
+    lastName: "",
+    workemail: "",
+    mobileNo: "",
+    password: "",
+  });
   return (
     <div className="auth-wrapper">
-      <h2>Register as Investor!</h2>
+      <div className="row">
+          <div className="col-lg-6 offset-lg-3">
+            <div className="section-title text-center">
+              <h1 className="rlheading">Register as Investor!</h1>
+            </div>
+          </div>
+        </div>
       <form className="auth-inner">
         <h3>Let's Create your account!</h3>
         <InputGroup>
           <InputGroup.Text>
             <BsBuildingCheck />
           </InputGroup.Text>
-          <FormControl placeholder="Investor Company name *" />
+          <FormControl type="text" placeholder="Investor Company name *" name="investorcompanyName" required />
         </InputGroup>
         <div className="row">
           <div className="col-md-6 col-sm-6">
@@ -37,7 +52,7 @@ export const InvestorSignup = () => {
               <InputGroup.Text>
                 <BsFillPersonFill />
               </InputGroup.Text>
-              <FormControl placeholder="First Name *" />
+              <FormControl type="text" placeholder="First Name *" />
             </InputGroup>
           </div>
           <div className="col-md-6 col-sm-6">
@@ -45,7 +60,7 @@ export const InvestorSignup = () => {
               <InputGroup.Text>
                 <BsFillPersonFill />
               </InputGroup.Text>
-              <FormControl placeholder="Last Name *" />
+              <FormControl type="text" placeholder="Last Name *" />
             </InputGroup>
           </div>
         </div>
@@ -54,7 +69,7 @@ export const InvestorSignup = () => {
             <InputGroup.Text>
               <BsFillEnvelopeAtFill />
             </InputGroup.Text>
-            <FormControl placeholder="Work Email Address" />
+            <FormControl type="email" placeholder="Work Email Address" />
           </InputGroup>
         </div>
         <div className="row">
@@ -68,9 +83,17 @@ export const InvestorSignup = () => {
         <div className="row">
           <InputGroup>
             <InputGroup.Text>
+              <BsLockFill />
+            </InputGroup.Text>
+            <FormControl placeholder="Password" type="password" />
+          </InputGroup>
+        </div>
+        <div className="row">
+          <InputGroup>
+            <InputGroup.Text>
               <BsFileText />
             </InputGroup.Text>
-            <FormControl placeholder="About Investor's Company" />
+            <FormControl as="textarea" rows={3} placeholder="About Investor's Company" />
           </InputGroup>
         </div>
         <div className="row">

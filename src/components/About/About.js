@@ -5,28 +5,28 @@ import './About.css';
 
 const teamMembers = [
   {
-    name: 'John Doe',
+    name: 'Arpit Bhatnagar',
     role: 'Co-founder & CEO',
     description:
-      'Passionate about entrepreneurship and technology, John is dedicated to helping young entrepreneurs turn their ideas into successful businesses. He brings a wealth of experience from his previous startup ventures.',
+      'Passionate about entrepreneurship and technology, Arpit is dedicated to helping young entrepreneurs turn their ideas into successful businesses.',
     image: './Arpit_bhatnagar.jpg', 
   },
   {
-    name: 'Jane Smith',
+    name: 'Deepak Srivastava',
     role: 'Co-founder & COO',
     description:
       'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
     image: './Deepak_Srivastava.jpeg', 
   },
   {
-    name: 'Michael Johnson',
+    name: 'Ashutosh Verma',
     role: 'Lead Developer',
     description:
       'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
     image: 'Ashutosh_Verma.jpeg', 
   },
   {
-    name: 'Emily Davis',
+    name: 'Dipika Borse',
     role: 'Marketing Specialist',
     description:
       'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
@@ -35,7 +35,7 @@ const teamMembers = [
 ];
 export const About = () => {
   return (
-    <div className="about-us">
+    <div className="container">
       <Container>
       <div className="intro">
           <h1 className='meet'>Welcome to Entre4Growth</h1>

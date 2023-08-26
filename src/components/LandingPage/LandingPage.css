@@ -18,19 +18,18 @@ button a{
 .container{
     margin: 10px;
 }
-.card-css{
-    
-}
 .main-title{
     margin: 20px;
     color: darkcyan;
     font-weight: bolder;
     line-height: 52px;
 }
-/*
-.heading{
-    text-align: center;
+.card-img-top{
+    max-width: 70%; /* Adjust this value to control the image size */
+    display: block;
+    margin: 0 auto;
 }
+/*
 h1{
     font-size: 2.5rem;
     margin: 0;
@@ -45,7 +44,6 @@ p{
     margin: 10px 0;
     color: #666;
 }
-
 button:hover{
     background-color: #2980b9;
 } */

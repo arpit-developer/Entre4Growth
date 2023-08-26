@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import {
@@ -6,18 +6,69 @@ import {
   BsFillEnvelopeAtFill,
   BsFillChatSquareTextFill,
   BsFillPhoneFill,
+  BsPatchCheckFill,
 } from "react-icons/bs";
 import { InputGroup, FormControl } from "react-bootstrap";
+import Toast from 'react-bootstrap/Toast';
 import Alert from "react-bootstrap/Alert";
 import "./Contact.css";
 import "leaflet/dist/leaflet.css";
 
 export const Contact = () => {
   const mapCenter = [28.613939, 77.209023];
+  const [showLoader, setShowLoader] = useState(false);
+  const [show, setShow] = useState(false);
+  const [formData ,setFormData] = useState({
+    fullName:"",
+    email:"",
+    message:"",
+  });
+  const [submittedData, setSubmittedData] = useState(null);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+  const handleSubmit = async (e) => {
+    setShowLoader(true);
+    setTimeout(() => setShowLoader(false), 2000);
+    e.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        console.log("Data sent to server:", data);
+        setSubmittedData(data);
+        setShow(true);
+        setFormData({
+          fullName: '',
+          email: '',
+          message: ''
+        });
+      } else {
+        console.error("Failed to send data to server");
+      }
+    } catch (error) {
+      console.error("Error sending data:", error);
+    }
+  };
   return (
     <div className="contact-us">
       <Container>
+      
         <h1>Contact Us</h1>
+        {submittedData && (
+        <Toast  className="d-inline-block m-1"
+        bg={"success"} onClose={() => setShow(false)} show={show} delay={5000} autohide>
+          <Toast.Body className={'text-white'}><BsPatchCheckFill size={30}/> Woohoo, We'll contact you soon!</Toast.Body>
+        </Toast>
+      )}
         <Row>
           <Col md={6}>
             <Alert variant="primary">
@@ -54,19 +105,19 @@ export const Contact = () => {
         </Row>
         <Row>
           <Col md={6}>
-            <Form>
+            <Form onSubmit={handleSubmit}>
               <InputGroup>
                 <InputGroup.Text>
                   <BsFillPersonFill />
                 </InputGroup.Text>
-                <FormControl placeholder="Full Name " />
+                <FormControl value={formData.fullName} placeholder="Full Name " type="text" name="fullName" onChange={handleChange} required />
               </InputGroup>
               <div className="row">
                 <InputGroup>
                   <InputGroup.Text>
                     <BsFillEnvelopeAtFill />
                   </InputGroup.Text>
-                  <FormControl placeholder="Email Address " />
+                  <FormControl value={formData.email} placeholder="Email Address " type="email" name="email" onChange={handleChange} required />
                 </InputGroup>
               </div>
               <div className="row">
@@ -74,15 +125,16 @@ export const Contact = () => {
                   <InputGroup.Text>
                     <BsFillChatSquareTextFill />
                   </InputGroup.Text>
-                  <FormControl
+                  <FormControl value={formData.message}
                     as="textarea"
                     rows={4}
-                    placeholder="Your Message Here! "
+                    placeholder="Your Message Here! " name ="message" onChange={handleChange} required
                   />
                 </InputGroup>
               </div>
               <div className="row">
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"  loading={showLoader}
+            disabled={showLoader}>
                   Submit
                 </Button>
               </div>
