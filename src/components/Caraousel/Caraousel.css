@@ -1,12 +1,9 @@
 /* src/components/LandingPage.css */
 .slideshow {
-  height: 50%;
+  
   }
-  .react-responsive-carousel .carousel .slider-wrapper {
-    height: 100px; /* Adjust the desired height */
+  .carousel-slider{
+    width: 100%;
+    height: 40%;
   }
   
-  .react-responsive-carousel .carousel .slider-wrapper img {
-    height: 20%;
-    object-fit: cover;
-  }

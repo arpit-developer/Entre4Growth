@@ -8,30 +8,87 @@ const teamMembers = [
     name: 'John Doe',
     role: 'Co-founder & CEO',
     description:
-      'Passionate about entrepreneurship and technology, John is dedicated to helping young entrepreneurs turn their ideas into successful businesses. He brings a wealth of experience from his previous startup ventures.',
+      'Passionate about entrepreneurship and technology.',
     image: './.jpg', 
   },
   {
     name: 'Jane Smith',
     role: 'Co-founder & COO',
     description:
-      'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
+      'With a background in business operations',
     image: './.jpeg', 
   },
   {
     name: 'Michael Johnson',
     role: 'Lead Developer',
     description:
-      'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
+      'Michael is the tech guru behind our platform. ',
     image: '.jpeg', 
   },
   {
     name: 'Emily Davis',
     role: 'Marketing Specialist',
     description:
-      'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
+      'Emily is responsible for spreading the word about our platform.',
     image: '.jpeg', 
   },
+  {
+    name: 'John Doe',
+    role: 'Co-founder & CEO',
+    description:
+      'Passionate about entrepreneurship and technology.',
+    image: './.jpg', 
+  },
+  {
+    name: 'Jane Smith',
+    role: 'Co-founder & COO',
+    description:
+      'With a background in business operations',
+    image: './.jpeg', 
+  },
+  {
+    name: 'Michael Johnson',
+    role: 'Lead Developer',
+    description:
+      'Michael is the tech guru behind our platform. ',
+    image: '.jpeg', 
+  },
+  {
+    name: 'Emily Davis',
+    role: 'Marketing Specialist',
+    description:
+      'Emily is responsible for spreading the word about our platform.',
+    image: '.jpeg', 
+  },
+  {
+    name: 'John Doe',
+    role: 'Co-founder & CEO',
+    description:
+      'Passionate about entrepreneurship and technology.',
+    image: './.jpg', 
+  },
+  {
+    name: 'Jane Smith',
+    role: 'Co-founder & COO',
+    description:
+      'With a background in business operations',
+    image: './.jpeg', 
+  },
+  {
+    name: 'Michael Johnson',
+    role: 'Lead Developer',
+    description:
+      'Michael is the tech guru behind our platform. ',
+    image: '.jpeg', 
+  },
+  {
+    name: 'Emily Davis',
+    role: 'Marketing Specialist',
+    description:
+      'Emily is responsible for spreading the word about our platform.',
+    image: '.jpeg', 
+  },
+  
 ];
 export const Mentorships = () => {
   return (
