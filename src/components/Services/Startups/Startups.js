@@ -1,5 +1,7 @@
 import React from "react";
 import Cards from "./Cards";
+import Button from "react-bootstrap/Button";
+import { BsArrowRightSquare, BsPower } from "react-icons/bs";
 import "./Startups.css";
 
 export const Startups = () => {
@@ -63,9 +65,35 @@ export const Startups = () => {
             </div>
           </div>
         </div>
+        <div className="mb-5">
+          <h2>Take the leap and join us</h2>
+          {/* <p>Get started and pave your path to success</p> */}
+          <a href="/signup">
+            <Button variant="primary" size="lg">
+              <BsArrowRightSquare />
+              Get onboard
+            </Button>
+          </a>{" "}
+          {/* <p>Log in and open doors to growth</p> */}
+          <a href="/login">
+            <Button variant="primary" size="lg">
+              <BsPower size={25} />
+              Login
+            </Button>
+          </a>
+        </div>
         <div className="row">
           <div className="col-md-6 col-sm-6">
-            <div className="feature-step-item">
+            <div className="mid-item">
+              <div className="feature-step-item">
+                <h1>Find Investors &amp; Get Funding</h1>
+                <h6 className="feature-step-title">
+                  Discover the right investors for your startup.
+                </h6>
+              </div>
+            </div>
+          </div>
+          {/* <div className="feature-step-item">
               <div className="mid-item">
                 <h1>Find Investors &amp; Get Funding</h1>
               </div>
@@ -74,8 +102,8 @@ export const Startups = () => {
                   Discover the right investors for your startup.
                 </h6>
               </div>
-            </div>
-          </div>
+            </div> */}
+
           <div className="col-md-6 col-sm-6">
             <div className="feature-step-item">
               <div className="feature-step-icon">
@@ -100,13 +128,12 @@ export const Startups = () => {
           </div>
 
           <div className="col-md-6 col-sm-6">
-            <div className="feature-step-item">
-              <div className="mid-item">
+            <div className="mid-item">
+              <div className="feature-step-item">
                 <h1>From Vision To Success!</h1>
-              </div>
-              <div className="feature-step-info">
+
                 <h6 className="feature-step-title">
-                Vision-driven marketing propels team growth and fuels success.
+                  Vision-driven marketing propels team growth and fuels success.
                 </h6>
               </div>
             </div>

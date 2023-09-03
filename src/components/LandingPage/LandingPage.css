@@ -1,5 +1,4 @@
-
- .row {
+.row {
     text-align: center;
  }
  .landing-page{
@@ -29,6 +28,9 @@ button a{
     display: block;
     margin: 0 auto;
 }
+.viewport{
+    min-height: 100vh;
+  }
 /*
 h1{
     font-size: 2.5rem;

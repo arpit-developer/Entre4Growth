@@ -1,0 +1,61 @@
+/* *{
+    padding: 0;
+    margin: 0;
+}
+p{
+    
+    display: flex;
+    flex-direction: row;
+  text-align: justify;
+    
+}
+
+
+li{
+   margin-left: 0cm;
+   text-align: left;
+}
+.img{
+    width: 1000px;
+    height: 450px;
+}
+.double{
+    width: 700px;
+height: 570px;
+}
+.img-fluid{
+    width: 500px;
+height: 700px;
+}
+.type{
+    width: 750px;
+    height: 450px;
+}
+.fundamenals{
+    width: 750px;
+    height: 450px;
+}
+.finance{
+    width: 500px;
+    height: 500px;
+}
+.step{
+    width: 900px;
+    height: 460px;
+}
+.compo{
+width:600px;
+height: 300px;
+}
+.tips{
+    width: 900px;
+    height: 460px; 
+}
+.beni{
+    margin-left: 250px;
+    width:700px;
+}
+.start{
+    width: 900px;
+    height: 460px;  
+} */

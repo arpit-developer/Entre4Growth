@@ -1,3 +1,6 @@
+.viewport{
+  min-height: 100vh;
+}
 .community {
     padding: 50px 0;
     background-color: #f8f9fa;

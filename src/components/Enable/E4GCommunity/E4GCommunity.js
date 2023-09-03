@@ -1,25 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import QuestionList from './QuestionList';
+import Sidebar from './Sidebar';
 import './E4GCommunity.css';
 
 export const E4GCommunity = () => {
-    return (
-      <div className="community">
-        {/* ... previous code */}
-        <div className="user-posts">
-          <h3>Latest Posts</h3>
-          <UserPost username="User123" content="Just joined the community! Excited to learn and collaborate." />
-          <UserPost username="DevStar" content="Working on an exciting project. Can't wait to share!" />
-          {/* Add more user posts */}
-        </div>
-      </div>
-    );
+  
+  const [selectedTag, setSelectedTag] = useState(null);
+
+  const handleTagSelection = (tag) => {
+    setSelectedTag(tag);
   };
-  const UserPost = ({ username, content }) => {
-    return (
-      <div className="user-post">
-        <h4>{username}</h4>
-        <p>{content}</p>
+
+  return (
+    <div className="viewport">
+      <div className='row'>
+        <h1>E4G Community</h1>
       </div>
-    );
-  };
-  export default E4GCommunity;
+      <Container fluid>
+        <Row>
+          <Col md={3}>
+            
+            <Sidebar onSelectTag={handleTagSelection} />
+          </Col>
+          <Col md={9}>
+            
+            <QuestionList selectedTag={selectedTag} />
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
+};
+
+export default E4GCommunity;

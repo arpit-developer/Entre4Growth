@@ -14,16 +14,16 @@ export const Footer = () => {
       <footer className="footer">
         <div className="footer-content">
           <div className="social-icons">
-            <a href="/">
+            <a href="https://www.facebook.com">
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="/">
+            <a href="https://www.twitter.com">
               <FontAwesomeIcon icon={faTwitter} />
             </a>
-            <a href="/">
+            <a href="https://www.instagram.com">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="/">
+            <a href="https://www.linkedin.com">
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </div>

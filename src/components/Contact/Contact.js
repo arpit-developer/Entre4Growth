@@ -9,7 +9,7 @@ import {
   BsPatchCheckFill,
 } from "react-icons/bs";
 import { InputGroup, FormControl } from "react-bootstrap";
-import Toast from 'react-bootstrap/Toast';
+import Toast from "react-bootstrap/Toast";
 import Alert from "react-bootstrap/Alert";
 import "./Contact.css";
 import "leaflet/dist/leaflet.css";
@@ -18,10 +18,10 @@ export const Contact = () => {
   const mapCenter = [28.613939, 77.209023];
   const [showLoader, setShowLoader] = useState(false);
   const [show, setShow] = useState(false);
-  const [formData ,setFormData] = useState({
-    fullName:"",
-    email:"",
-    message:"",
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    message: "",
   });
   const [submittedData, setSubmittedData] = useState(null);
   const handleChange = (e) => {
@@ -30,7 +30,7 @@ export const Contact = () => {
   };
   const handleSubmit = async (e) => {
     setShowLoader(true);
-    setTimeout(() => setShowLoader(false), 2000);
+    //setTimeout(() => setShowLoader(false), 2000);
     e.preventDefault();
 
     try {
@@ -46,10 +46,11 @@ export const Contact = () => {
         console.log("Data sent to server:", data);
         setSubmittedData(data);
         setShow(true);
+        setShowLoader(true);
         setFormData({
-          fullName: '',
-          email: '',
-          message: ''
+          fullName: "",
+          email: "",
+          message: "",
         });
       } else {
         console.error("Failed to send data to server");
@@ -61,14 +62,21 @@ export const Contact = () => {
   return (
     <div className="contact-us">
       <Container>
-      
         <h1>Contact Us</h1>
         {submittedData && (
-        <Toast  className="d-inline-block m-1"
-        bg={"success"} onClose={() => setShow(false)} show={show} delay={5000} autohide>
-          <Toast.Body className={'text-white'}><BsPatchCheckFill size={30}/> Woohoo, We'll contact you soon!</Toast.Body>
-        </Toast>
-      )}
+          <Toast
+            className="d-inline-block m-1"
+            bg={"success"}
+            onClose={() => setShow(false)}
+            show={show}
+            delay={5000}
+            autohide
+          >
+            <Toast.Body className={"text-white"}>
+              <BsPatchCheckFill size={30} /> Woohoo, We'll contact you soon!
+            </Toast.Body>
+          </Toast>
+        )}
         <Row>
           <Col md={6}>
             <Alert variant="primary">
@@ -88,17 +96,17 @@ export const Contact = () => {
           </Col>
           <Col md={6}>
             <Alert variant="primary">
-            <div className="row">
+              <div className="row">
                 <div className="col-md-2">
-              <InputGroup>
-                <BsFillPhoneFill size={50}/>
-              </InputGroup>
-              </div>
-              <div className="col-md-8">
-              <strong>+91 98765 43210</strong>
-              <br />
-              Helpline, Mon - Sat 10:30am - 6:30pm
-              </div>
+                  <InputGroup>
+                    <BsFillPhoneFill size={50} />
+                  </InputGroup>
+                </div>
+                <div className="col-md-8">
+                  <strong>+91 98765 43210</strong>
+                  <br />
+                  Helpline, Mon - Sat 10:30am - 6:30pm
+                </div>
               </div>
             </Alert>
           </Col>
@@ -110,14 +118,28 @@ export const Contact = () => {
                 <InputGroup.Text>
                   <BsFillPersonFill />
                 </InputGroup.Text>
-                <FormControl value={formData.fullName} placeholder="Full Name " type="text" name="fullName" onChange={handleChange} required />
+                <FormControl
+                  value={formData.fullName}
+                  placeholder="Full Name "
+                  type="text"
+                  name="fullName"
+                  onChange={handleChange}
+                  required
+                />
               </InputGroup>
               <div className="row">
                 <InputGroup>
                   <InputGroup.Text>
                     <BsFillEnvelopeAtFill />
                   </InputGroup.Text>
-                  <FormControl value={formData.email} placeholder="Email Address " type="email" name="email" onChange={handleChange} required />
+                  <FormControl
+                    value={formData.email}
+                    placeholder="Email Address "
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    required
+                  />
                 </InputGroup>
               </div>
               <div className="row">
@@ -125,16 +147,24 @@ export const Contact = () => {
                   <InputGroup.Text>
                     <BsFillChatSquareTextFill />
                   </InputGroup.Text>
-                  <FormControl value={formData.message}
+                  <FormControl
+                    value={formData.message}
                     as="textarea"
                     rows={4}
-                    placeholder="Your Message Here! " name ="message" onChange={handleChange} required
+                    placeholder="Your Message Here! "
+                    name="message"
+                    onChange={handleChange}
+                    required
                   />
                 </InputGroup>
               </div>
               <div className="row">
-                <Button variant="primary" type="submit"  loading={showLoader}
-            disabled={showLoader}>
+                <Button
+                  variant="primary"
+                  type="submit"
+                  loading={showLoader}
+                  disabled={showLoader}
+                >
                   Submit
                 </Button>
               </div>

@@ -1,0 +1,13 @@
+h6{
+    color: #3498db; 
+}
+.blg-img{
+    width: 900px;
+    height: 500px;
+    align-items: center;
+}
+.first-blog{
+    margin-left: 300px;
+    margin-right: 300px;
+    justify-content: center;
+}

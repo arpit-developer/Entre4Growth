@@ -1,6 +1,6 @@
 .header {
   background-color: #3498db;
-  color: #fff;
+  /* color: #fff; */
   justify-content: space-between;
 }
 
@@ -34,9 +34,10 @@
 .nav-links a:hover {
   color: #f39c12;
 }
-/* #basic-nav-dropdown{
-    color: #fff;
-} */
+#basic-navbar-nav{
+  justify-content: end;  
+  color: #fff;
+} 
 .ml-auto {
   margin-left: auto !important;
 }

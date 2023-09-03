@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col,Button } from 'react-bootstrap';
 import Mentors from './Mentors';
 import './Mentorships.css';
 
@@ -7,86 +7,42 @@ const teamMembers = [
   {
     name: 'John Doe',
     role: 'Co-founder & CEO',
-    description:
-      'Passionate about entrepreneurship and technology.',
-    image: './.jpg', 
+    image: './mentors/man.png', 
   },
   {
     name: 'Jane Smith',
     role: 'Co-founder & COO',
-    description:
-      'With a background in business operations',
-    image: './.jpeg', 
+    image: './mentors/profile.png', 
   },
   {
     name: 'Michael Johnson',
     role: 'Lead Developer',
-    description:
-      'Michael is the tech guru behind our platform. ',
-    image: '.jpeg', 
+    image: './mentors/girl.png', 
   },
   {
     name: 'Emily Davis',
     role: 'Marketing Specialist',
-    description:
-      'Emily is responsible for spreading the word about our platform.',
-    image: '.jpeg', 
+    image: './mentors/man.png', 
   },
   {
     name: 'John Doe',
     role: 'Co-founder & CEO',
-    description:
-      'Passionate about entrepreneurship and technology.',
-    image: './.jpg', 
+    image: './mentors/girl.png', 
   },
   {
     name: 'Jane Smith',
     role: 'Co-founder & COO',
-    description:
-      'With a background in business operations',
-    image: './.jpeg', 
+    image: './mentors/man.png', 
   },
   {
     name: 'Michael Johnson',
     role: 'Lead Developer',
-    description:
-      'Michael is the tech guru behind our platform. ',
-    image: '.jpeg', 
+    image: './mentors/human.png', 
   },
   {
     name: 'Emily Davis',
     role: 'Marketing Specialist',
-    description:
-      'Emily is responsible for spreading the word about our platform.',
-    image: '.jpeg', 
-  },
-  {
-    name: 'John Doe',
-    role: 'Co-founder & CEO',
-    description:
-      'Passionate about entrepreneurship and technology.',
-    image: './.jpg', 
-  },
-  {
-    name: 'Jane Smith',
-    role: 'Co-founder & COO',
-    description:
-      'With a background in business operations',
-    image: './.jpeg', 
-  },
-  {
-    name: 'Michael Johnson',
-    role: 'Lead Developer',
-    description:
-      'Michael is the tech guru behind our platform. ',
-    image: '.jpeg', 
-  },
-  {
-    name: 'Emily Davis',
-    role: 'Marketing Specialist',
-    description:
-      'Emily is responsible for spreading the word about our platform.',
-    image: '.jpeg', 
+    image: './mentors/profile.png', 
   },
   
 ];
@@ -97,6 +53,11 @@ export const Mentorships = () => {
       <div className="intro">
           <h1 className='meet'>Mentors Network Pillar</h1>
           <p>Entrepreneurship mentoring is a relationship in which an experienced and established entrepreneur supports,</p><p> teaches, and prepares novice entrepreneurs for potential business challenges.</p>
+        </div>
+        <div className="row">
+          <h3>Are you a Mentor? Join us to enlighten young minds</h3>
+          <div className='col-md-6 offset-md-3'>
+        <a href='/mentorships/mentor-signup' ><Button variant="primary" size="lg" active>Join Us</Button></a></div>
         </div>
         <h2 className='meet'>Meet Our Mentors</h2>
         <Row>
