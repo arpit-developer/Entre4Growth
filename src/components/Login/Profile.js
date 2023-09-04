@@ -30,9 +30,9 @@ const Profile = ({ userData }) => {
                       width="110"
                     />
 
-                    <button className="btn btn-primary btn-sm" type="button">
+                    {/* <button className="btn btn-primary btn-sm" type="button">
                       Upload new image
-                    </button>
+                    </button> */}
                     <div className="mt-3">
                       <h4>{userData.firstName}</h4>
                       <p className="text-secondary mb-1">
@@ -144,8 +144,7 @@ const Profile = ({ userData }) => {
                   <hr />
                   <div className="row">
                     <div className="col-sm-6">
-                      Business Type (e.g., LLC, Corporation, Sole
-                      Proprietorship)
+                      Business Type 
                     </div>
                     <div className="col-sm-6">Business Location</div>
                   </div>
@@ -154,6 +153,7 @@ const Profile = ({ userData }) => {
                     <div className="col-sm-6">Industry or Sector</div>
                     <div className="col-sm-6">Founding Date</div>
                   </div>
+                  <hr/>
                   <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">Full Name</h6>

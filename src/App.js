@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Header isLoggedIn={isLoggedIn || isInvestorLoggedIn} />
+      <Header isLoggedIn= {isLoggedIn ? true :isInvestorLoggedIn? true:false} />
         <Routes>
           <Route
             path="/"
@@ -57,7 +57,6 @@ function App() {
               <Route path="/dashboard" element={<UserDashboard />} />
               <Route path="/profile" element={<Profile />} />
               <Route path="/edit-profile" element={<EditProfile />} />
-              {/* ... other user-specific routes ... */}
             </>
           ) : (
             <Route path="/" element={<Login />} />

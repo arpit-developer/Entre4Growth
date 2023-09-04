@@ -7,6 +7,7 @@ import {
   Button,
   InputGroup,
   FormControl,
+  Toast,
 } from "react-bootstrap";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
@@ -16,6 +17,7 @@ import {
   BsFillPhoneFill,
   BsBuildingsFill,
   BsFileText,
+  BsPatchCheckFill,
 } from "react-icons/bs";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FcContacts, FcGlobe } from "react-icons/fc";
@@ -28,6 +30,7 @@ export const FindInvestor = ({ userData }) => {
 
   const handleReset = () => {
     setQuery("");
+    setResults([]);
   };
   const handleSearch = async () => {
     try {
@@ -66,20 +69,19 @@ export const FindInvestor = ({ userData }) => {
     leveloffunding: "",
     keynote: "",
   });
-  //const [submittedData, setSubmittedData] = useState(null);
+  const [submittedData, setSubmittedData] = useState(null);
   const [showLoader, setShowLoader] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
-    if(name==="workemail"){
-      console.log(name+""+value);
-    }
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
   const handleSubmit = async (e) => {
     setShowLoader(true);
     setTimeout(() => setShowLoader(false), 2000);
     e.preventDefault();
-
+    {results.map((investor) => (
+    formData.investorcompanyName = investor.investorcompanyName))}
+    formData.workemail =  userData.workemail
     try {
       const response = await fetch("http://localhost:5000/pitch-business", {
         method: "POST",
@@ -88,11 +90,13 @@ export const FindInvestor = ({ userData }) => {
         },
         body: JSON.stringify(formData),
       });
+
       if (response.ok) {
         const data = await response.json();
         console.log("Data sent to server:", data);
-        //setSubmittedData(data);
+        setSubmittedData(data);
         setShow(true);
+        setResults([]);
       } else {
         console.error("Failed to send data to server");
       }
@@ -129,6 +133,7 @@ export const FindInvestor = ({ userData }) => {
                 Reset
               </button>
             </div>
+           
           </div>
         </Form>
         {/* <ListGroup>
@@ -231,9 +236,12 @@ export const FindInvestor = ({ userData }) => {
                   </Button>
                 </OverlayTrigger>
                 <hr />
+                
                 <Button variant="primary" onClick={handleShow}>
+
                   Pitch My Business
                 </Button>
+          
                 <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>"Let's Talk Business"</Modal.Title>
@@ -243,7 +251,7 @@ export const FindInvestor = ({ userData }) => {
                     <h4>Begin Your Funding Pitch</h4>
                     
                       <div className="row">
-                        <input type="hidden" value={userData.workemail} name="workemail"/>
+                        <input type="hidden" value={userData.workemail} name="workemail" />
                         <InputGroup>
                           <InputGroup.Text>
                             <BsBuildingsFill />
@@ -300,7 +308,23 @@ export const FindInvestor = ({ userData }) => {
                           <FormControl as="textarea" rows={3} name="keynote" onChange={handleChange} />
                         </InputGroup>
                       </div>
-                    
+                      <div className="row">
+                      <div className="col-lg-6 offset-lg-3">
+                      {submittedData && (
+        <Toast
+          className="d-inline-block m-2"
+          bg={"success"}
+          onClose={() => setShow(false)}
+          show={show}
+          delay={5000}
+         autohide
+        >
+          <Toast.Body className={"text-white"}>
+            <BsPatchCheckFill size={30} /> Pitch has sent to Investor. See you Soon.
+            </Toast.Body>
+        </Toast>
+      )}
+      </div></div>
                   </Modal.Body>
                   <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>
