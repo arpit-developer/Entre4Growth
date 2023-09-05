@@ -4,6 +4,9 @@
     text-align: center;   
     justify-content: center;
 }
+.card-pointer {
+    cursor: pointer;
+  }
 .mid-item{
     height: 100%;
     display: flex;

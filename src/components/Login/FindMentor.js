@@ -8,6 +8,7 @@ export const FindMentor = () => {
 
   const handleReset = () => {
     setQuery("");
+    setResults([]);
   };
   const handleSearch = async () => {
     try {

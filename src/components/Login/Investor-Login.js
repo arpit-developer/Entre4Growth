@@ -122,10 +122,9 @@ export const InvestorLogin = () => {
           <button
             type="submit"
             className="btn btn-primary"
-            loading={showLoader}
             disabled={showLoader}
           >
-            Submit
+            {showLoader ? "Logging In..." : "Log In"}
           </button>
         </div>
         <p className="forgot-password text-left">
@@ -135,6 +134,19 @@ export const InvestorLogin = () => {
           <a href="/forgot-password">Forgot Password?</a>
         </p>
       </form>
+      <img
+        src="/investor1.png"
+        alt="Investor1"
+        className="bottom-right-image"
+        style={{
+          position: 'fixed',
+          bottom: '10px',   // Adjust the distance from the bottom as needed
+          right: '10px',    // Adjust the distance from the right as needed
+          width: '100px',    // Set the width to your desired size
+          height: '100px',
+          opacity : 0.4,
+        }}
+      />
     </div>
   );
 };

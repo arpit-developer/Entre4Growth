@@ -26,7 +26,7 @@ import Modal from "react-bootstrap/Modal";
 export const FindInvestor = ({ userData }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(false); 
+  const [loading, setLoading] = useState(false);
 
   const handleReset = () => {
     setQuery("");
@@ -52,7 +52,7 @@ export const FindInvestor = ({ userData }) => {
       }
     } catch (error) {
       console.error("An error occurred:", error);
-    }finally {
+    } finally {
       setLoading(false); // Stop loading
     }
   };
@@ -64,7 +64,7 @@ export const FindInvestor = ({ userData }) => {
   //Modal Submit
 
   const [formData, setFormData] = useState({
-    workemail:"",
+    workemail: "",
     investorcompanyName: "",
     leveloffunding: "",
     keynote: "",
@@ -79,9 +79,13 @@ export const FindInvestor = ({ userData }) => {
     setShowLoader(true);
     setTimeout(() => setShowLoader(false), 2000);
     e.preventDefault();
-    {results.map((investor) => (
-    formData.investorcompanyName = investor.investorcompanyName))}
-    formData.workemail =  userData.workemail
+    {
+      results.map(
+        (investor) =>
+          (formData.investorcompanyName = investor.investorcompanyName)
+      );
+    }
+    formData.workemail = userData.workemail;
     try {
       const response = await fetch("http://localhost:5000/pitch-business", {
         method: "POST",
@@ -96,7 +100,7 @@ export const FindInvestor = ({ userData }) => {
         console.log("Data sent to server:", data);
         setSubmittedData(data);
         setShow(true);
-        setResults([]);
+        // setResults([]);
       } else {
         console.error("Failed to send data to server");
       }
@@ -133,7 +137,6 @@ export const FindInvestor = ({ userData }) => {
                 Reset
               </button>
             </div>
-           
           </div>
         </Form>
         {/* <ListGroup>
@@ -159,8 +162,7 @@ export const FindInvestor = ({ userData }) => {
                 <Card.Text>
                   Name: {investor.firstName} {investor.lastName}
                   <br />
-                  About: {investor.about}
-                 {' '} {userData.firstName}
+                  About: {investor.about} {userData.firstName}
                 </Card.Text>
                 {["bottom"].map((placement) => (
                   <OverlayTrigger
@@ -236,22 +238,25 @@ export const FindInvestor = ({ userData }) => {
                   </Button>
                 </OverlayTrigger>
                 <hr />
-                
-                <Button variant="primary" onClick={handleShow}>
 
+                <Button variant="primary" onClick={handleShow}>
                   Pitch My Business
                 </Button>
-          
+
                 <Modal show={show} onHide={handleClose}>
                   <Modal.Header closeButton>
                     <Modal.Title>"Let's Talk Business"</Modal.Title>
                   </Modal.Header>
                   <Form onSubmit={handleSubmit}>
-                  <Modal.Body>
-                    <h4>Begin Your Funding Pitch</h4>
-                    
+                    <Modal.Body>
+                      <h4>Begin Your Funding Pitch</h4>
+
                       <div className="row">
-                        <input type="hidden" value={userData.workemail} name="workemail" />
+                        <input
+                          type="hidden"
+                          value={userData.workemail}
+                          name="workemail"
+                        />
                         <InputGroup>
                           <InputGroup.Text>
                             <BsBuildingsFill />
@@ -305,36 +310,47 @@ export const FindInvestor = ({ userData }) => {
                           <InputGroup.Text>
                             <BsFileText />
                           </InputGroup.Text>
-                          <FormControl as="textarea" rows={3} name="keynote" onChange={handleChange} />
+                          <FormControl
+                            as="textarea"
+                            rows={3}
+                            name="keynote"
+                            onChange={handleChange}
+                          />
                         </InputGroup>
                       </div>
                       <div className="row">
-                      <div className="col-lg-6 offset-lg-3">
-                      {submittedData && (
-        <Toast
-          className="d-inline-block m-2"
-          bg={"success"}
-          onClose={() => setShow(false)}
-          show={show}
-          delay={5000}
-         autohide
-        >
-          <Toast.Body className={"text-white"}>
-            <BsPatchCheckFill size={30} /> Pitch has sent to Investor. See you Soon.
-            </Toast.Body>
-        </Toast>
-      )}
-      </div></div>
-                  </Modal.Body>
-                  <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>
-                      Close
-                    </Button>
-                    <Button type="submit" variant="primary" loading={showLoader}
-            disabled={showLoader}>
-                      Send
-                    </Button>
-                  </Modal.Footer>
+                        <div className="col-lg-6 offset-lg-3">
+                          {submittedData && (
+                            <Toast
+                              className="d-inline-block m-2"
+                              bg={"success"}
+                              onClose={() => setShow(false)}
+                              show={show}
+                              delay={5000}
+                              autohide
+                            >
+                              <Toast.Body className={"text-white"}>
+                                <BsPatchCheckFill size={30} /> Pitch has sent to
+                                Investor. See you Soon.
+                              </Toast.Body>
+                            </Toast>
+                          )}
+                        </div>
+                      </div>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button variant="secondary" onClick={handleClose}>
+                        Close
+                      </Button>
+                      <Button
+                        type="submit"
+                        variant="primary"
+                        loading={showLoader}
+                        disabled={showLoader}
+                      >
+                        Send
+                      </Button>
+                    </Modal.Footer>
                   </Form>
                 </Modal>
               </Card.Body>

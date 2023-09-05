@@ -6,28 +6,28 @@ import './About.css';
 const teamMembers = [
   {
     name: 'Arpit Bhatnagar',
-    role: 'Co-founder & CEO',
+    role: 'Lead Developer',
     description:
       'Passionate about entrepreneurship and technology, Arpit is dedicated to helping young entrepreneurs turn their ideas into successful businesses.',
     image: '/about/Arpit_bhatnagar.jpg', 
   },
   {
     name: 'Deepak Srivastava',
-    role: 'Co-founder & COO',
+    role: 'Developer',
     description:
       'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
     image: '/about/Deepak_Srivastava.jpeg', 
   },
   {
     name: 'Ashutosh Verma',
-    role: 'Lead Developer',
+    role: 'Developer',
     description:
       'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
     image: '/about/Ashutosh_Verma.jpeg', 
   },
   {
     name: 'Dipika Borse',
-    role: 'Marketing Specialist',
+    role: 'Developer',
     description:
       'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
     image: '/about/Dipika_Borse.jpeg', 

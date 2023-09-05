@@ -149,7 +149,21 @@ export const Login = () => {
             <a href="/forgot-password">Forgot Password?</a>
           </p>
         </form>
+        <img
+        src="/enter.png"
+        alt="Image"
+        className="bottom-right-image"
+        style={{
+          position: 'fixed',
+          bottom: '10px',   // Adjust the distance from the bottom as needed
+          right: '10px',    // Adjust the distance from the right as needed
+          width: '100px',    // Set the width to your desired size
+          height: '100px',
+          opacity : 0.4,
+        }}
+      />
       </div>
+      
     </Container>
   );
 };

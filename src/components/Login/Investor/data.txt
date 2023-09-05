@@ -2,7 +2,6 @@ After investor login
 landing on Dashboard
 find startup to invest
 Company profile
-market resources
 logout
 
 

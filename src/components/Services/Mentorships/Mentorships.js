@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col,Button } from 'react-bootstrap';
 import Mentors from './Mentors';
 import './Mentorships.css';
@@ -47,6 +47,22 @@ const teamMembers = [
   
 ];
 export const Mentorships = () => {
+  const [mentors, setMentors] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/mentors')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then((data) => setMentors(data))
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        // You can set an error state here if needed
+      });
+  }, []);
   return (
     <div className="about-us">
       <Container>

@@ -1,7 +1,14 @@
 import React ,{useState} from 'react'
-import { Container, Form,Card,Row } from 'react-bootstrap';
+import { Container, Form,Card,Row,Button } from 'react-bootstrap';
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Popover from "react-bootstrap/Popover";
+import {
+  BsFillEnvelopeAtFill,
+  BsFillPhoneFill,
+} from "react-icons/bs";
+import { FcContacts } from "react-icons/fc";
 
-export const FindStartups = ({investorData}) => {
+export const FindStartups = ({pitchBusinessData}) => {
   const [query, setQuery] = useState('');
   const [results, setResults] = useState([]);
   
@@ -31,7 +38,6 @@ export const FindStartups = ({investorData}) => {
     <div className='viewport'>
       <Container>
       <h1>Search Startups</h1>
-      <p>{investorData.firstName}</p>
       <Form>
         <Form.Control
           type="text"
@@ -42,7 +48,7 @@ export const FindStartups = ({investorData}) => {
         <div className='row'>
         <div className='col-md-6 offset-md-3'><button type="button" className="btn btn-primary" onClick={handleSearch}>
           Search
-        </button>
+        </button>{' '}
         <button type="button" className="btn btn-info" onClick={handleReset} >Reset</button></div>
         </div>
       </Form>
@@ -59,8 +65,32 @@ export const FindStartups = ({investorData}) => {
                 <br />
                 Email: {users.workemail}
               </Card.Text>
-              <Card.Link href="#">Contact</Card.Link>
-              {/* <Card.Link href="#">{users.linkedin}</Card.Link> */}
+               {["bottom"].map((placement) => (
+                  <OverlayTrigger
+                    trigger="click"
+                    key={placement}
+                    placement={placement}
+                    overlay={
+                      <Popover id={`popover-positioned-${placement}`}>
+                        <Popover.Header as="h3">Contact</Popover.Header>
+                        <Popover.Body>
+                          <strong>
+                            <BsFillPhoneFill /> {users.mobileNo}
+                          </strong>{" "}
+                          <br />
+                          <strong>
+                            <BsFillEnvelopeAtFill /> {users.workemail}
+                          </strong>
+                        </Popover.Body>
+                      </Popover>
+                    }
+                  >
+                    <Button variant="light">
+                      <FcContacts size={30} />{" "} Contact
+                    </Button>
+                  </OverlayTrigger>
+                ))}
+            
             </Card.Body>
           </Card>
         ))}

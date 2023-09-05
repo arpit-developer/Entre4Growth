@@ -4,7 +4,7 @@ import CardGroup from 'react-bootstrap/CardGroup';
 function GroupExample() {
   return (
     <CardGroup>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-1.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Find Investments</Card.Title>
@@ -16,7 +16,7 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-2.png" className='card-css' />
         <Card.Body>
           <Card.Title>Find Prospect</Card.Title>
@@ -28,7 +28,7 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-3.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Market Research</Card.Title>
@@ -40,7 +40,7 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-4.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Enrich Your Database</Card.Title>
@@ -52,7 +52,7 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-5.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Build Your Product</Card.Title>
@@ -64,7 +64,7 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-2.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Concluding investments</Card.Title>

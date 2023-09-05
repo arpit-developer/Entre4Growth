@@ -1,23 +1,25 @@
+.header1{
+    background-color: gray;
+}
 .resources{
-   height: 100%;
-   width: 100%;
- 
+    margin-top: 5px;
 }
 .search{
     width: 300px;
     height: 20px;
 }
 nav{
-    /* margin-top: 20px; */
     display: flex;
     align-items: center;
-   
-
 }
+a{
+    text-decoration: none;
+}
+
 .tags{
-    color:#3498db;
-    font-size: 28px;
-    font-weight: bold;
+ 
+    color: #fff;
+    justify-content: space-between;
 }
 nav ul li{
     list-style-type: none;
@@ -39,6 +41,7 @@ h1 {
 }
 h3 {
     color: #3498db;
+
 }
 
 h2{
@@ -49,11 +52,11 @@ h2{
     height: 200px;
     
 }
-.art{
+/* .art{
     margin: 40px 20px ;
     display: flex;
     justify-content: space-between;
-}
+} */
 .third-img{
     width: 900px;
     height: 500px;
@@ -72,11 +75,12 @@ h2{
 .yotube-box{
     display: flex;
     justify-content: space-between;
-    margin: 100px auto;
+    /* margin: 100px auto; */
   
   }
   iframe{
-    margin: 0 10px;
+    margin: 10px 10px 10px 10px;
+
   }
 .blg-img{
     width:400px;
@@ -88,7 +92,42 @@ h2{
     display: flex;
     justify-content: space-between;
 }
-.book-img{
-    width:100px;
-    height: 150px;
+.card_img{
+    
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; 
+}
+.card_img:hover{
+    transform: scale(1.1);
+
+}
+.centre_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-article{
+   margin-left: 2rem;
+   margin-right: 2rem;
+}
+.second-img{
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out; 
+    width: 700px;
+    
+    align-items: center;
+}
+.second-img:hover{
+    transform: scale(1.1);
+
+}
+.second-article{
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+}
+.fourth-article{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }

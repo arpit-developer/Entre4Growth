@@ -24,7 +24,15 @@ import { SocialMediaMarketing } from "./components/Grow/SocialMediaMarketing";
 import { SEOMarketing } from "./components/Grow/SEOMarketing";
 import { ContentMarketing } from "./components/Grow/ContentMarketing";
 import { TimeManagement } from "./components/Grow/TimeManagement";
+import Second from "./components/Enable/Resources/Articles/Second";
 import First from "./components/Enable/Resources/Articles/First";
+import Visteblogs from "./components/Enable/Resources/Visteblogs";
+import Vistpod from "./components/Enable/Resources/Visitpod";
+import Blogfirst from "./components/Enable/Resources/Blogs/Blogfirst";
+import Blogsecond from "./components/Enable/Resources/Blogs/Blogsecond";
+import Blogthird from "./components/Enable/Resources/Blogs/Blogthird";
+import Fourth from "./components/Enable/Resources/Articles/Fourth";
+import Book from "./components/Enable/Resources/Book";
 import UserDetails from "./components/Login/userDetails";
 import Profile  from "./components/Login/Profile";
 import UserDashboard from "./components/Login/UserDashboard";
@@ -36,6 +44,7 @@ import { MentorsLogin } from "./components/Services/Mentorships/MentorsLogin";
 import EditProfile from "./components/Login/EditProfile";
 import { InvestorDashboard } from "./components/Login/Investor/InvestorDashboard";
 import { WebDevelopment } from "./components/Grow/WebDevelopment";
+import { MentorDashboard } from "./components/Services/Mentorships/MentorDashboard";
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -99,6 +108,14 @@ function App() {
 
           <Route path="/resources" element={<Resources />} />
           <Route path="/first" element={<First />} />
+          <Route path="/second" element={<Second/>} />
+          <Route path="/fourth" element={<Fourth />} />
+          <Route path="/visteblogs" element={<Visteblogs />} />
+          <Route path="/blogfirst" element={<Blogfirst />} />
+          <Route path="/blogsecond" element={<Blogsecond />} />
+          <Route path="/blogthird" element={<Blogthird />} />
+          <Route path="/vistpod" element={<Vistpod />} />
+          <Route path="/book" element={<Book />} />
           
           <Route path="/e4gcommunity" element={<E4GCommunity />} />
           {/* <Route path="/businesstools" element={<BusinessTools />} /> */}
@@ -112,8 +129,9 @@ function App() {
           
           <Route path="/mentorships/mentor-signup" element={<MentorsSignup/>}/>
           <Route path="/mentorships/mentor-login" element={<MentorsLogin/>}/>
+          <Route path="/mentor-dashboard" element={<MentorDashboard/>}/>
           <Route path="/find-investor" element={<FindInvestor />}/>
-          
+          <Route path="/profile" element={<Profile />} />
           <Route path="/find-mentor" element={<FindMentor />}/>
           
         </Routes>

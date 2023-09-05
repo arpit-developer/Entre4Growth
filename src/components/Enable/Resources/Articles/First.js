@@ -4,131 +4,205 @@ import "../Resources.css";
 export const First = () => {
   return (
     <div className="first-article">
-      <img
-        src="/articles/800px-Man_talking_with_female_salesperson_in_a_car_showroom_by_senivpetro.jpg"
-        alt=""
-      />
-      <p>
-        There’s a lot of good news for Latino business owners in the United
-        States. Twenty-three percent of Latino business owners report their
-        companies have recovered and are even doing better than they were prior
-        to the pandemic ( State of Latino Entrepreneurship: 2022 Research
-        Report).According to a 2021 report from the U.S. Senate Joint Economic
-        Committee, almost 25 percent of startups were Hispanic-owned, overall
-        contributing more than $800 billion to the U.S. economy. That's exciting
-        news if you own one of the nearly five million Hispanic-owned businesses
-        in America today, or if you aspire to join their ranks.{" "}
-      </p>
-      <h1>
-        These 12 resources can help guide Hispanic entrepreneurs to success:{" "}
+      <h1 style={{ color: "#c69c69", fontSize: "3rem",marginTop:"1rem" }}>
+        How to Identify Your Ideal Customers
       </h1>
-      <h3>1. Association of Latino Professionals for America (ALPFA)</h3>
+      <br />
+      <div className="centre_img">
+      <img
+        className="card_img"
+        src="/articles/2_1.png"
+        alt=""
+        style={{ maxWidth: "100%" }}
+      />
+      </div>
+      <br />
       <p>
-        ALPFA aims to empower and develop Latinos to become leaders throughout
-        the United States. The more than 116,000 professional and student
-        members of ALPFA have access to programs that include skills training
-        for leadership, fellowships/scholarships, and mentoring for Latina women
-        by Latina women. ALPFA has hundreds of Fortune 1000 corporate partners,
-        offering access to 50,000 paid summer internships.
+        When you own a small business, reaching as many customers as possible is
+        important. But you’re not a big-box mega-store, so you can’t cast the
+        wide net they can. Instead, the key is to identify your potential ideal
+        customers and target as many of them as you can afford. Your first step
+        is to figure out who your ideal customers are. The more you know about
+        them, the easier they’ll be to find and market to.
       </p>
-      <h3>2. Hispanic Association of Small Businesses (HASB)</h3>
+      <h2 style={{ color: "green" }}>Identifying Ideal Customers</h2>
       <p>
-        HASB provides minority-owned businesses and minority individuals
-        aspiring to start a business with educational materials, business
-        workshops and remedial English workshops to improve their success. The
-        association provides resources and tools that can help improve
-        entrepreneurs’ productivity and assist them in competing against bigger
-        businesses.
+        Who do you think your target market is? The best way to identify your
+        ideal customers is to create a profile—a buyer or customer persona—a
+        fictional representation of them. The key is to be as specific as
+        possible. If you’re already in business, you may already have some
+        information about them. So start with your current customer base; they
+        will offer the most insights.
       </p>
-      <h3>3. The Hispanic Retail Chamber of Commerce (HRCOC)</h3>
+      <h3>Your Best Customers</h3>
       <p>
-        The Hispanic Retail Chamber of Commerce represents U.S. Hispanic retail
-        businesses and their interests and priorities to the government and the
-        media. It provides consulting, seminars, workshops, marketing support,
-        networking and procurement opportunities, and legislative information
-        for members. With Accredited Alliances in every state, the HRCOC serves
-        members of every size and in many retail sectors.{" "}
+        There are numerous ways you can learn more about your customers. What
+        characteristics do they share? You can survey them in person or online.
+        Here are several ideas:
       </p>
-      <h3>4. Latinas Think Big</h3>
+      <ul>
+        <li>
+          Conduct customer surveys by mail, comment cards, your website, or
+          social platforms.
+        </li>
+        
+          <li>
+            This works especially well if you’re a local business. Invite some
+            of your best customers to a meeting or for lunch. Since they know
+            you, most will be happy to help. You can offer them a small
+            incentive, such as a discount, as a thank you.
+          </li>
+        
+        <li>See what customers say about your business on social media.</li>
+        <li>Monitor online ratings and reviews.</li>
+        <li>Talk to customers one-on-one.</li>
+      </ul>
+      <h2 style={{ color: "purple" }}>
+        B2C Business Characteristics to Identify:
+      </h2>
+      <ul>
+        <li>Age</li>
+        <li>Gender</li>
+        <li>Marital status</li>
+        <li>Number of children, if any</li>
+        <li>Race/ethnicity</li>
+        <li>Income</li>
+        <li>Occupation</li>
+        <li>Location</li>
+        <li>Life stage</li>
+        <li>Psychographics (attitudes, hobbies, beliefs, interests)</li>
+        <li>The publications/blogs/podcasts they turn to for information</li>
+        <li>Social media usage</li>
+        <li>Pain points</li>
+        <li>Own or rent a home</li>
+      </ul>
+      <h2 style={{ color: "orange" }}>
+        B2B Business Characteristics to Identify:
+      </h2>
+      <ul>
+        <li>Industry</li>
+        <li>Job title</li>
+        <li>Responsibilities</li>
+        <li>Location/number of locations</li>
+        <li>Sales/revenues</li>
+        <li>Years in business</li>
+        <li>Number of employees</li>
+        <li>Marketing budget</li>
+        <li>The publications/blogs/podcasts they turn to for information</li>
+        <li>Social media usage</li>
+        <li>Pain points/biggest challenges</li>
+        <li>Member of any industry associations</li>
+      </ul>
       <p>
-        With more than 20,000 members, Latinas Think Big is the largest online
-        network of Latina professionals, entrepreneurs and students. The network
-        connects Latina business owners so they can share opportunities and
-        mentor one another. Other features include a job board, educational
-        materials, news updates and curated content.
+        B2B businesses may already have this type of data. See what information
+        your customer relationship management software (CRM), loyalty program
+        software, and customer purchase history reveal. You can also ask your
+        customers questions about their relationship with your business, such
+        as:
       </p>
-      <h3>Latino Business Action Network (LBAN)</h3>
+      <ul>
+        <li>
+          How do they typically learn about products and services like yours?
+        </li>
+        <li>Why did they decide to buy from you the first time?</li>
+        <li>Why do they keep doing business with you?</li>
+        <li>
+          What do they get from doing business with you that your competitors
+          don’t offer?
+        </li>
+      </ul>
       <p>
-        In addition to working with the Stanford Latino Entrepreneurship
-        Initiative, LBAN is part of the Small Business Administration’s
-        Community Navigator Pilot Program for Technical Assistance and
-        Development of Hispanic Small Businesses. The pilot program helps
-        support and empower Hispanic- and minority-owned businesses so they can
-        help underserved communities. LBAN also offers a 9-week hybrid Business
-        Scaling program through the Stanford Graduate School of Business, where
-        qualified business owners participate in lectures, workshops, networking
-        and opportunities to help grow their businesses.
+        After surveying your customers, categorize the characteristics they
+        share. See what patterns emerge.
       </p>
-      <h3>6. League of United Latin American Citizens (LULAC)</h3>
+      <h1 style={{ color: "red" }}>Creating Customer Personas</h1>
       <p>
-        LULAC was founded in 1929, making it the oldest Hispanic civil rights
-        organization in the U.S. Part of its mission is to improve the economic
-        condition of Hispanics who live in the U.S. and Puerto Rico. It also
-        tackles educational attainment, housing, health and civil rights
-        concerns. LULAC offers various types of community-based programming on
-        such topics as leadership, technology and economic development. There
-        are more than 1,000 LULAC councils across the country.
+        Once you collect all your customer persona data, create your profiles.
+        Here’s an example of a customer persona for a bicycle retailer:
       </p>
-      <h3>7. Minority Business Development Agency (MBDA)</h3>
       <p>
-        The MBDA is part of the U.S. Department of Commerce and promotes the
-        growth of minority-owned businesses through its national network of
-        business centers, specialty centers and grantees. It offers customized
-        business development and industry-focused services to help Hispanic
-        business owners access and connect with capital, contracts and markets.
-        The MBDA also advocates for and promotes minority-owned businesses with
-        elected officials, policymakers and business leaders.
+        Mike is a 55-year-old professional with a household income of $150,000.
+        He’s married with adult children and lives in the suburbs. Fitness is a
+        priority for him, and he spends $5,000-$10,000 annually on high-end
+        bicycles and accessories. He wants functional, high-quality products
+        that convey status. Depending on the type of business you own, what you
+        sell and how many customers you have, you may have to create multiple
+        customer personas. Don’t let this overwhelm you; start with your top
+        customers and only create a few personas. You can create more later.
       </p>
-      <h3>8. National Minority Supplier Development Council (NMSDC)</h3>
       <p>
-        NMSDC certifies minority-owned businesses and then connects those
-        companies to corporate members to encourage supplier diversity. You can
-        apply for NMSDC certification through one of its 23 regional councils.
-        NMSDC works with over 15,000 certified minority-owned businesses
-        connecting them to a vast network of corporate members looking to
-        purchase products, services, and solutions from minority-owned
-        businesses.
+        Here’s another example of a different customer persona a bicycle
+        retailer may have:
       </p>
-      <h3>9. PepsiCo Juntos Crecemos</h3>
       <p>
-        Created to educate Hispanic food and beverage small business owners on
-        how digitization is the key to sustained growth and long-term success,
-        PepsiCo Juntos Crecemos is a no-cost, personalized digital consultation
-        program for owners of restaurants, bodegas and carnicerías. Offering
-        grants and access to funding, mentorship, marketing support and
-        operational assistance, the program\'s goal is to help Hispanic
-        entrepreneurs in the food and beverage industry. The Hispanic Digital &
-        Delivery Program provides resources to help level-up business owners
-        with online ordering, delivery logistics, infrastructure, technology,
-        marketing and SEO. In addition, the Impacto Hispanic Business
-        Accelerator is investing $10 million to provide capital and small
-        business coaching to 500 Hispanic-owned food and beverage businesses by
-        2025.
+        Ashley is a single, 28-year-old urban professional who earns $90,000.
+        She spends around $5,000 a year on bikes and accessories. Biking on the
+        weekends is one of her favorite ways to relax. She’s very active on
+        social media and likes to be the first to try new bike gear.
       </p>
-      <h3>10. Stanford Latino Entrepreneurship Initiative (SLEI)</h3>
+      <h2 style={{ color: "brown" }}>Negative Customer Personas</h2>
       <p>
-        Primarily a research and education partnership between Stanford
-        University and the Latino Business Action Network, the Stanford Latino
-        Entrepreneurship Initiative also operates the SLEI Education Scaling
-        Program. Explicitly designed for Latino business owners who generate
-        more than $1 million in gross revenue per year or who have raised at
-        least $500,000 in external funding, this nine-week immersive program
-        offers business owners education, networking opportunities, personal
-        mentorship and an improved understanding of how to access and manage
-        capital.
+        HubSpot says building a negative buyer persona (the people you don’t
+        want as customers) can be helpful. You’ll save time and money by not
+        marketing to people, such as:
       </p>
-      <h3>11. UnidosUS</h3>
+      <ul>
+        <li>Professionals too advanced for your product or service</li>
+        <li>
+          Students who are only engaging with your content for research purposes
+        </li>
+        <li>
+          Potential customers who are just too expensive to acquire because of a
+          low average sale price or high churn rate
+        </li>
+      </ul>
+      <h2 style={{ color: "teal" }}>Finding more Ideal Customers</h2>
+      <p>
+        Using your customer persona/s, design your marketing and sales
+        strategies to attract your ideal customers by:
+      </p>
+      <ul>
+        <li>
+          Creating marketing and advertising messages that address their pain
+          points
+        </li>
+        <li>Using social media to share content relevant to their concerns</li>
+        <li>
+          Including the words and phrases they use in your sales and marketing
+          copy
+        </li>
+        <li>
+          Communicating in their preferred format (text, visual, video,
+          long-form, short-form)
+        </li>
+      </ul>
+      <p>Focus your sales efforts on your ideal customers by:</p>
+      <ul>
+        <li>
+          Purchasing lists of prospects who fit your ideal customer profile
+          (this is getting to be a more difficult way to convert customers)
+        </li>
+        <li>
+          Targeting people with your ideal customer profile on social media
+        </li>
+        <li>Getting referrals from your ideal customers</li>
+        <li>
+          Selling your product or service via their preferred sales channels
+        </li>
+      </ul>
+      <p>
+        Identifying your ideal customers will help you weed out less-than-ideal
+        customers—those that are harder to sell to, don’t spend as much money,
+        and aren’t as profitable. By focusing on your ideal customers and
+        discovering the best way to communicate with them, your business will
+        grow faster with less effort, becoming more successful and profitable.
+        This can sound a little overwhelming. If you need help, ask your SCORE
+        mentor to help you define and develop your ideal customer profiles. This
+        article is sponsored by Lexmark GO Line. Learn more about small business
+        resources at Lexmark’s the Spot.
+      </p>
     </div>
   );
 };
+
 export default First;

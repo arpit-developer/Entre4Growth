@@ -1,11 +1,10 @@
-import React,{ useEffect, useState } from 'react'
-import { Table } from 'react-bootstrap';
-import FindStartups from './FindStartups';
-import './InvestorDashboard.css';
-
+import React, { useEffect, useState } from "react";
+import InvestorDashboardTable from './InvestorDashboardTable';
+import FindStartups from "./FindStartups";
+import "./InvestorDashboard.css";
 
 export const InvestorDashboard = () => {
-  const [investorData, setInvestorData] = useState("");
+  const [pitchBusinessData, setPitchBusinessData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,17 +23,16 @@ export const InvestorDashboard = () => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
+        const rawData = await response.json(); // Parse the response only once
 
-        const data = await response.json();
+        console.log(rawData);
 
-        console.log(data);
-
-        if (data.data === "token expired") {
+        if (rawData.data === "token expired") {
           alert("Session Expired. Please Login Again.");
           window.localStorage.clear();
           window.location.href = "/investor-login";
         } else {
-          setInvestorData(data.data);
+          setPitchBusinessData(rawData.data); // Store the parsed data in state
         }
       } catch (error) {
         console.error("An error occurred:", error);
@@ -44,39 +42,9 @@ export const InvestorDashboard = () => {
     fetchData();
   }, []);
   return (
-    <div className='viewport'>
-    <div className="investor-dashboard">
-    <div className='row'><h1>Investor Dashboard</h1></div>
-    <div className='row'>
-      <div className='col-md-8 offset-md-2'>
-    <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>S.No</th>
-          <th>Name of Startup</th>
-          <th>Email</th>
-          <th>Level of Funding</th>
-          <th>Key Note</th>
-        </tr>
-      </thead>
-      <tbody>
-      {/* investorData={investorData} */}
-      {/* {investorData.emailid}
-        {investorData.map(investor => (
-          <tr key={investor.id}>
-            <td>{investor.id}</td>
-            <td>{investor.name}</td>
-            <td>{investor.emailid}</td>
-          </tr>
-        ))} */}
-      </tbody>
-    </Table>
-    </div>
-    </div>
-  </div>
-  <>
-  <FindStartups investorData={investorData}/>
-  </>
-  </div>
+      <>
+        <InvestorDashboardTable pitchBusinessData={pitchBusinessData} />
+        <FindStartups pitchBusinessData={pitchBusinessData} />
+      </>
   );
-}
+};

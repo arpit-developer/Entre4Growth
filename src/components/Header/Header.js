@@ -35,7 +35,7 @@ export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
     <>
       {isLoggedIn ? (
         <Navbar expand="lg" className="header">
-          <Navbar.Brand href="/dashboard" className="logo">
+          <Navbar.Brand href="/userdetails" className="logo">
             <FontAwesomeIcon
               icon={faE}
               beatFade
@@ -91,7 +91,6 @@ export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
               </NavDropdown>
               <Nav.Link href="/find-investor">Find Investor</Nav.Link>
               <Nav.Link href="/find-mentor">Find Mentor</Nav.Link>
-
               <Nav.Link onClick={logOut}>Logout</Nav.Link>
             </Nav>
           </Navbar.Collapse>

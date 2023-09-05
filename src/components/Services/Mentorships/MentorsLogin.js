@@ -11,7 +11,7 @@ export const MentorsLogin = () => {
   const [showLoader, setShowLoader] = useState(false);
   const [show, setShow] = useState(false);
   const [formData, setFormData] = useState({
-    workemail: "",
+    email: "",
     password: "",
   });
   const [submittedData, setSubmittedData] = useState(null);
@@ -41,7 +41,7 @@ export const MentorsLogin = () => {
             setShowLoader(true);
             window.localStorage.setItem("token", data.data);
             window.localStorage.setItem("loggedIn", true);
-            window.location.href = "./userdetails";
+            window.location.href = "./mentor-dashboard";
           }
         });
     } catch (error) {
@@ -54,7 +54,7 @@ export const MentorsLogin = () => {
         <div className="row">
           <div className="col-lg-6 offset-lg-3">
             <div className="section-title text-center">
-              <h1>Log In to Unlock New World </h1>
+              <h1>Log In for Mentor </h1>
             </div>
           </div>
         </div>
@@ -87,7 +87,7 @@ export const MentorsLogin = () => {
               <FormControl
                 placeholder="Email Address"
                 type="email"
-                name="workemail"
+                name="email"
                 required
                 onChange={handleChange}
               />

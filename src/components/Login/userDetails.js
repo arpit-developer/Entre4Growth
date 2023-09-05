@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-// import UserDashboard from './UserDashboard';
+import UserDashboard from './UserDashboard';
 import Profile  from './Profile';
 import FindInvestor from './FindInvestor';
 import FindMentor from './FindMentor'; 
@@ -46,7 +46,7 @@ const UserDetails = () => {
 
   return (
     <>
-      {/* <UserDashboard userData={userData} /> */}
+      <UserDashboard userData={userData} />
       <Profile userData={userData}/>
       <FindInvestor userData={userData}/>
       <FindMentor/>

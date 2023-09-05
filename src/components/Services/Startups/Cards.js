@@ -1,10 +1,11 @@
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
+import './Startups.css'
 
 function GroupExample() {
   return (
-    <CardGroup>
-      <Card>
+    <CardGroup> 
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-2.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Discover Investors</Card.Title>
@@ -13,10 +14,11 @@ function GroupExample() {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">Last updated 37 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-2.png" className='card-css' />
         <Card.Body>
           <Card.Title>Find Prospects</Card.Title>
@@ -28,7 +30,8 @@ function GroupExample() {
           <small className="text-muted">Last updated 3 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+      
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-3.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Market Research</Card.Title>
@@ -37,10 +40,11 @@ function GroupExample() {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">Last updated 9 mins ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-4.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Enrich Your Database</Card.Title>
@@ -49,10 +53,11 @@ function GroupExample() {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">Last updated 23 min ago</small>
         </Card.Footer>
       </Card>
-      <Card>
+
+      <Card className="card-pointer">
         <Card.Img variant="top" src="./card/im-5.jpg" className='card-css' />
         <Card.Body>
           <Card.Title>Monetary Advancement</Card.Title>
@@ -61,9 +66,10 @@ function GroupExample() {
           </Card.Text>
         </Card.Body>
         <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
+          <small className="text-muted">Last updated 30 mins ago</small>
         </Card.Footer>
       </Card>
+
     </CardGroup>
   );
 }
