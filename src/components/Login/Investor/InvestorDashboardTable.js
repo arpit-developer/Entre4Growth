@@ -1,5 +1,9 @@
 import React from 'react'
 import { Table } from "react-bootstrap";
+// import {
+//   BsPatchCheckFill,
+// } from "react-icons/bs";
+// import {RiDeleteBin5Line} from "react-icons/ri"
 export const InvestorDashboardTable = ({pitchBusinessData}) => {
   return (
     <div>
@@ -15,6 +19,7 @@ export const InvestorDashboardTable = ({pitchBusinessData}) => {
             <th>Email</th>
             <th>Level of Funding</th>
             <th>Keynote</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -26,6 +31,13 @@ export const InvestorDashboardTable = ({pitchBusinessData}) => {
               <td>{business.keynote}</td>
             </tr>
           ))}
+          {/* <tr>
+              <td>Entre4growth</td>
+              <td>arpit@gmail.com</td>
+              <td>Seed Funding</td>
+              <td>I want seed funding</td>
+              <td><BsPatchCheckFill size={30} /> {'  '}<RiDeleteBin5Line size={30}/></td>
+            </tr> */}
         </tbody>
             </Table>
           </div>

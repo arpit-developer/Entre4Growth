@@ -83,15 +83,6 @@ function App() {
             <Route path="/investor-login" element={<InvestorLogin />} />
           )}
 
-          {/* <Route exact path="/" element={isLoggedIn === "true" ? <UserDetails /> : <Login />}
-          />
-          <Route path="/userDetails" element={<UserDetails />} />
-           <Route path="/dashboard" element={<UserDashboard />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/edit-profile" element={<EditProfile />} /> */}
-
-          {/* <Route path="/investor-dashboard" element={<InvestorDashboard />} /> */}
-
           <Route path="/about" element={<About />} />
           <Route path="/startups" element={<Startups />} />
           <Route path="/investors" element={<Investors />} />

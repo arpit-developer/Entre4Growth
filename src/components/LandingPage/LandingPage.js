@@ -9,9 +9,11 @@ import {
   BsArrowRightSquare,BsPower,BsBuildingAdd,
 } from "react-icons/bs";
 
-export const LandingPage = () => {
+export const LandingPage = ({ theme }) => {
   const cardStyle = {
     height: '60%',
+    backgroundColor: theme === 'dark' ? '#333' : '#fff',
+    color: theme === 'dark' ? '#fff' : '#333',
   };
 
   return (
@@ -19,7 +21,8 @@ export const LandingPage = () => {
       <div className="viewport">
       <div className="row">
         <h1>Entre4Growth</h1>
-        <div className="main-title"><h3>One Stop Platform for Budding Entrepreneurs</h3></div>
+        <div className="main-title">
+          <h3>One Stop Platform for Budding Entrepreneurs</h3></div>
       </div>
       <div className="row">
         <div className="col-md-12 col-sm-6">
@@ -120,3 +123,4 @@ export const LandingPage = () => {
     </div>
   );
 };
+export default LandingPage;

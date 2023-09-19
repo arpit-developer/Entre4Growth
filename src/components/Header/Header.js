@@ -5,22 +5,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faE } from "@fortawesome/free-solid-svg-icons";
 import { fa4 } from "@fortawesome/free-solid-svg-icons";
 import { faG } from "@fortawesome/free-solid-svg-icons";
+import { FaSun, FaMoon } from 'react-icons/fa';
 import "./Header.css";
 //import { Profile } from "../Login/Profile";
 //import { NavLink  } from "react-router-dom";
 
 export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+ 
   const logOut = () => {
     //if(isLoggedIn === true){
     window.localStorage.clear();
@@ -168,7 +168,8 @@ export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
               {/* <Nav.Link href="/businesstools">Business Tools</Nav.Link> */}
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link onClick={toggleTheme}>
-                <img src="/night-mode.png" alt="dark" width="22px" />
+                {/* <img src="/night-mode.png" alt="dark" width="22px" /> */}
+                {theme === "light" ? <FaMoon size={20}/> : <FaSun size={20}/>}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

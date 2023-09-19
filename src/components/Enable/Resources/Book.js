@@ -28,6 +28,7 @@ export const Book = () => {
       </div>
       {/* Books Available Online Section */}
       <h2>Books Available Online</h2>
+      <div className="col-md-12">
       <div className="art1">
         <a
           href="https://www.amazon.in/Lean-Startup-Entrepreneurs-Continuous-Innovation/dp/0307887898"
@@ -111,7 +112,7 @@ export const Book = () => {
           />
         </a>
       </div>
-
+</div>
       {/* Offline Books Section */}
       <h2>Offline Books</h2>
       <div className="art1">
