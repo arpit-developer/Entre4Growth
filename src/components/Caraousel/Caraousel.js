@@ -26,7 +26,18 @@ export const Caraousel = () => {
         <div>
           <img src="/pictures/image-1000x400 (6).jpg"  alt="Slide 6" />
         </div>
-        
+        <div>
+          <img src="/pictures/image-1000x400 (10).jpg"  alt="Slide 7" />
+        </div>
+        <div>
+          <img src="/pictures/(21).png"  alt="Slide 8" />
+        </div>
+        <div>
+          <img src="/pictures/image-1000x400 (23).jpg"  alt="Slide 9" />
+        </div>
+        <div>
+          <img src="/pictures/image-1000x400 (11).jpg"  alt="Slide 10" />
+        </div>
       </Carousel>  
       
     </div>
