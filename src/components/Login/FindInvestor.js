@@ -79,12 +79,12 @@ export const FindInvestor = ({ userData }) => {
     setShowLoader(true);
     setTimeout(() => setShowLoader(false), 2000);
     e.preventDefault();
-    {
+    
       results.map(
         (investor) =>
           (formData.investorcompanyName = investor.investorcompanyName)
       );
-    }
+    
     formData.workemail = userData.workemail;
     try {
       const response = await fetch("http://localhost:5000/pitch-business", {

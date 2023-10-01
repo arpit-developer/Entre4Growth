@@ -7,8 +7,6 @@ import { fa4 } from "@fortawesome/free-solid-svg-icons";
 import { faG } from "@fortawesome/free-solid-svg-icons";
 import { FaSun, FaMoon } from 'react-icons/fa';
 import "./Header.css";
-//import { Profile } from "../Login/Profile";
-//import { NavLink  } from "react-router-dom";
 
 export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
@@ -61,7 +59,7 @@ export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
 
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav>
-              {/* <Nav.Link href="/dashboard">Dashboard</Nav.Link> */}
+              <Nav.Link href="/dashboard">Dashboard</Nav.Link>
               <Nav.Link href="/profile">Profile</Nav.Link>
               <NavDropdown title="4Grow" id="basic-nav-dropdown2">
                 <NavDropdown.Item href="/accounting">
@@ -158,17 +156,17 @@ export const Header = ({ isLoggedIn, isInvestorLoggedIn }) => {
               </NavDropdown>
 
               <NavDropdown title="Enable" id="basic-nav-dropdown3">
-                {/* <NavDropdown.Item href="/courses">Courses</NavDropdown.Item> */}
+                <NavDropdown.Item href="/courses">Courses</NavDropdown.Item>
                 <NavDropdown.Item href="/resources">Resources</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/e4gcommunity">
                   E4G Community
                 </NavDropdown.Item>
               </NavDropdown>
-              {/* <Nav.Link href="/businesstools">Business Tools</Nav.Link> */}
+              {/* <Link className="nav-link" to="/businesstools"> tools</Link> */}
+              <Nav.Link href="/businesstools">Business Tools</Nav.Link>
               <Nav.Link href="/contact">Contact</Nav.Link>
               <Nav.Link onClick={toggleTheme}>
-                {/* <img src="/night-mode.png" alt="dark" width="22px" /> */}
                 {theme === "light" ? <FaMoon size={20}/> : <FaSun size={20}/>}
               </Nav.Link>
             </Nav>

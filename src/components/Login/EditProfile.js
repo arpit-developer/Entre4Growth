@@ -8,16 +8,12 @@ import {
   AiOutlineGlobal,
   AiFillLinkedin,
 } from "react-icons/ai";
-import {
- 
-  BsFillPinMapFill,
- 
-} from "react-icons/bs";
+import { BsFillPinMapFill } from "react-icons/bs";
 
-import { InputGroup, FormControl } from "react-bootstrap";
+import { InputGroup } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Accordion from "react-bootstrap/Accordion";
-export default function EditProfile({userData}) {
+export default function EditProfile({ userData }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [mobile, setMobile] = useState("");
@@ -30,7 +26,7 @@ export default function EditProfile({userData}) {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:5000/editprofile", {
+      await fetch("http://localhost:5000/editprofile", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -77,71 +73,80 @@ export default function EditProfile({userData}) {
   return (
     <div className="container">
       <div className="main-body">
-      <form onSubmit={submitHandler}>
-        <div className="row">
-        
-          <div className="col-lg-4">
-            <div className="card">
-              <div className="card-body">
-                <div className="d-flex flex-column align-items-center text-center">
-                  <img
-                    src={pic}
-                    alt="Admin"
-                    className="rounded-circle p-1 bg-primary"
-                    width="110"
-                  />
-                  <div className="mt-3">
-                    <h4>John Doe</h4>
-                    <p className="text-secondary mb-1">Full Stack Developer</p>
-                    <p className="text-muted font-size-sm">
-                      Bay Area, San Francisco, CA
-                    </p>
+        <form onSubmit={submitHandler}>
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="card">
+                <div className="card-body">
+                  <div className="d-flex flex-column align-items-center text-center">
+                    <img
+                      src={pic}
+                      alt="Admin"
+                      className="rounded-circle p-1 bg-primary"
+                      width="110"
+                    />
+                    <div className="mt-3">
+                      <h4>John Doe</h4>
+                      <p className="text-secondary mb-1">
+                        Full Stack Developer
+                      </p>
+                      <p className="text-muted font-size-sm">
+                        Bay Area, San Francisco, CA
+                      </p>
+                    </div>
                   </div>
+                  <hr className="my-4" />
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiOutlineGlobal size={25} />
+                        Website
+                      </h6>
+                      <span className="text-secondary">
+                        https://bootdey.com
+                      </span>
+                    </li>
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiOutlineGithub size={25} />
+                        Github
+                      </h6>
+                      <span className="text-secondary">bootdey</span>
+                    </li>
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiOutlineTwitter size={25} />
+                        Twitter
+                      </h6>
+                      <span className="text-secondary">@bootdey</span>
+                    </li>
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiFillInstagram size={25} />
+                        Instagram
+                      </h6>
+                      <span className="text-secondary">bootdey</span>
+                    </li>
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiFillLinkedin size={25} />
+                        Linkedin
+                      </h6>
+                      <span className="text-secondary">-</span>
+                    </li>
+                    <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                      <h6 className="mb-0">
+                        <AiFillFacebook size={25} />
+                        Facebook
+                      </h6>
+                      <span className="text-secondary">bootdey</span>
+                    </li>
+                  </ul>
                 </div>
-                <hr className="my-4" />
-                <ul className="list-group list-group-flush">
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0">
-                      <AiOutlineGlobal size={25} />
-                      Website
-                    </h6>
-                    <span className="text-secondary">https://bootdey.com</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0">
-                      <AiOutlineGithub size={25} />
-                      Github
-                    </h6>
-                    <span className="text-secondary">bootdey</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0">
-                      <AiOutlineTwitter size={25} />
-                      Twitter
-                    </h6>
-                    <span className="text-secondary">@bootdey</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0">
-                      <AiFillInstagram size={25} />
-                      Instagram
-                    </h6>
-                    <span className="text-secondary">bootdey</span>
-                  </li>
-                  <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                    <h6 className="mb-0">
-                      <AiFillFacebook size={25} />
-                      Facebook
-                    </h6>
-                    <span className="text-secondary">bootdey</span>
-                  </li>
-                </ul>
               </div>
             </div>
-          </div>
 
-          <div className="col-lg-8">
-           
+            <div className="col-lg-8">
               <div className="card">
                 <div className="card-body">
                   <div className="row mb-3">
@@ -161,27 +166,21 @@ export default function EditProfile({userData}) {
                   </div>
                   <div className="row">
                     <div className="col-sm-5">
-                    <h6 className="mb-0">Business Type</h6> 
+                      <h6 className="mb-0">Business Type</h6>
                       <InputGroup>
-              <InputGroup.Text>
-                <BsFillPinMapFill />
-              </InputGroup.Text>
-              <Form.Select
-                value=""
-                name="location"
-              >
-                <option value="">Business Type</option>
-                <option value="mumbai">LLC</option>
-                <option value="delhi">Startup</option>
-                <option value="agra">Corporation</option>
-                <option value="agra">SoleProprietorship</option>
-                
-              </Form.Select>
-            </InputGroup>
+                        <InputGroup.Text>
+                          <BsFillPinMapFill />
+                        </InputGroup.Text>
+                        <Form.Select value="" name="location">
+                          <option value="">Business Type</option>
+                          <option value="mumbai">LLC</option>
+                          <option value="delhi">Startup</option>
+                          <option value="agra">Corporation</option>
+                          <option value="agra">SoleProprietorship</option>
+                        </Form.Select>
+                      </InputGroup>
                     </div>
-                    <div className="col-sm-5">
-                      Business Location
-                      </div>
+                    <div className="col-sm-5">Business Location</div>
                   </div>
                   <hr />
                   <div className="row">
@@ -192,27 +191,21 @@ export default function EditProfile({userData}) {
                     <div className="col-sm-3">
                       <h6 className="mb-0">Full Name</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">
-                    
-                    </div>
+                    <div className="col-sm-9 text-secondary"></div>
                   </div>
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">Email</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">
-                      
-                    </div>
+                    <div className="col-sm-9 text-secondary"></div>
                   </div>
                   <hr />
                   <div className="row">
                     <div className="col-sm-3">
                       <h6 className="mb-0">Mobile</h6>
                     </div>
-                    <div className="col-sm-9 text-secondary">
-                      
-                    </div>
+                    <div className="col-sm-9 text-secondary"></div>
                   </div>
                   <hr />
                   <div className="row">
@@ -220,10 +213,10 @@ export default function EditProfile({userData}) {
                       <h6 className="mb-0">Country</h6>
                     </div>
                     <div className="col-sm-4 text-secondary">
-                    <h6 className="mb-0">State</h6>
+                      <h6 className="mb-0">State</h6>
                     </div>
                     <div className="col-sm-4 text-secondary">
-                    <h6 className="mb-0">City</h6>
+                      <h6 className="mb-0">City</h6>
                     </div>
                   </div>
                   <hr />
@@ -232,15 +225,14 @@ export default function EditProfile({userData}) {
                       <h6 className="mb-0">About Business</h6>
                     </div>
                     <div className="col-sm-9 text-secondary">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do   
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed doLorem ipsum dolor sit amet, consectetur adipiscing
+                      elit, sed doLorem ipsum dolor sit amet, consectetur
+                      adipiscing elit, sed do
                     </div>
                   </div>
                   <hr />
                   <div className="row">
-                    
                     <Accordion defaultActiveKey="0" flush>
                       <Accordion.Item eventKey="0">
                         <Accordion.Header>Team Members</Accordion.Header>
@@ -257,7 +249,9 @@ export default function EditProfile({userData}) {
                         </Accordion.Body>
                       </Accordion.Item>
                       <Accordion.Item eventKey="2">
-                        <Accordion.Header>Funding Requirements</Accordion.Header>
+                        <Accordion.Header>
+                          Funding Requirements
+                        </Accordion.Header>
                         <Accordion.Body>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit, sed do
@@ -331,18 +325,14 @@ export default function EditProfile({userData}) {
                         value="Save Changes"
                       />{" "}
                       <a href="/">
-                        <button
-                          className="btn btn-secondary px-4"
-                        >
-                          Back
-                        </button>
+                        <button className="btn btn-secondary px-4">Back</button>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
+            </div>
           </div>
-        </div>
         </form>
       </div>
     </div>

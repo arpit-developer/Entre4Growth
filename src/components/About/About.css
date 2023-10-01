@@ -11,7 +11,7 @@
   }
   .team-member {
     border: none;
-    background-color: #f8f9fa;
+    background-color: #3498db;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
@@ -23,7 +23,7 @@
     object-fit: cover;
   }
   .role {
-    color: #3498db;
+    color: #000;
   }
   .card-img-top{
     padding: 10px;

@@ -151,7 +151,7 @@ export const Login = () => {
         </form>
         <img
         src="/enter.png"
-        alt="Image"
+        alt="login-icon"
         className="bottom-right-image"
         style={{
           position: 'fixed',

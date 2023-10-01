@@ -12,24 +12,17 @@ const teamMembers = [
     image: '/about/Arpit_bhatnagar.jpg', 
   },
   {
-    name: 'Deepak Srivastava',
-    role: 'Developer',
-    description:
-      'With a background in business operations, Jane ensures that our platform runs smoothly and efficiently. Her focus is on providing entrepreneurs with the best resources to foster growth.',
-    image: '/about/Deepak_Srivastava.jpeg', 
-  },
-  {
     name: 'Ashutosh Verma',
     role: 'Developer',
-    description:
-      'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
+    // description:
+    //   'Michael is the tech guru behind our platform. His expertise in web development ensures that our users have a seamless experience while using our tools and resources.',
     image: '/about/Ashutosh_Verma.jpeg', 
   },
   {
     name: 'Dipika Borse',
     role: 'Developer',
-    description:
-      'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
+    // description:
+    //   'Emily is responsible for spreading the word about our platform. Her creative marketing strategies help us reach budding entrepreneurs who can benefit from our services.',
     image: '/about/Dipika_Borse.jpeg', 
   },
 ];
@@ -52,7 +45,7 @@ export const About = () => {
         <h2 className='meet'>Meet Our Team</h2>
         <Row>
           {teamMembers.map((member, index) => (
-            <Col key={index} md={3} sm={6}>
+            <Col key={index} md={4} sm={6}>
               <TeamMember member={member} />
             </Col>
           ))}

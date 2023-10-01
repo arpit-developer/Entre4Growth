@@ -8,7 +8,7 @@ const TeamMember = ({ member }) => {
       <Card.Body>
         <Card.Title>{member.name}</Card.Title>
         <Card.Text className="role">{member.role}</Card.Text>
-        {/* <Card.Text className="description">{member.description}</Card.Text> */}
+        <Card.Text className="description">{member.description}</Card.Text>
       </Card.Body>
     </Card>
   );

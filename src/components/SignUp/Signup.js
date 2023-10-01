@@ -199,7 +199,7 @@ export const Signup = () => {
         </form>
         <img
         src="/add-user.png"
-        alt="Image"
+        alt="signup-icon"
         className="bottom-right-image"
         style={{
           position: 'fixed',

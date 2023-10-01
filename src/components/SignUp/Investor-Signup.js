@@ -291,7 +291,7 @@ export const InvestorSignup = () => {
       </form>
       <img
         src="/investor2.png"
-        alt="Image"
+        alt="investor-icon"
         className="bottom-right-image"
         style={{
           position: 'fixed',

@@ -47,7 +47,7 @@ const teamMembers = [
   
 ];
 export const Mentorships = () => {
-  const [mentors, setMentors] = useState([]);
+  const [, setMentors] = useState([]);
 
   useEffect(() => {
     fetch('http://localhost:5000/mentors')
