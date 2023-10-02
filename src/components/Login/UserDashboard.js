@@ -11,6 +11,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import { FaSquareOdnoklassniki, FaSquareXmark } from "react-icons/fa6";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -21,6 +22,12 @@ import {
   faPercent,
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
+import {
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillTwitterSquare,
+  AiFillGoogleSquare,
+} from "react-icons/ai";
 
 const UserDashboard = () => {
   return (
@@ -301,91 +308,34 @@ const UserDashboard = () => {
                   <tr>
                     <th scope="col">Referral</th>
                     <th scope="col">Visitors</th>
-                    <th scope="col" />
+                    <th scope="col">Rate</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">Thread</th>
+                    <th scope="row">{' '}Thread</th>
                     <td>1,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">60%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="60"
-                            barClassName="bg-gradient-danger"
-                          />
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
+                    <td><ProgressBar striped variant="secondary" animated now={40} /></td>
+                  </tr> 
                   <tr>
-                    <th scope="row">Facebook</th>
+                    <th scope="row"><AiFillFacebook/>{' '}Facebook</th>
                     <td>5,480</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">70%</span>
-                        
-                        <div class="progress">
-                          <div
-                            class="progress-bar bg-success"
-                            role="progressbar"
-                            
-                            aria-valuenow="25"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          >
-                            <ProgressBar striped variant="info" animated now={60} />
-                          </div>
-                        </div>
-                      </div>
-                    </td>
+                    <td><ProgressBar striped variant="primary" animated now={70} /></td>
                   </tr>
                   <tr>
-                    <th scope="row">Google</th>
+                    <th scope="row"><AiFillGoogleSquare/>{' '}Google</th>
                     <td>4,807</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">80%</span>
-                        <div>
-                          <Progress max="100" value="80" />
-                        </div>
-                      </div>
-                    </td>
+                    <td><ProgressBar striped variant="success" animated now={90} /></td>
                   </tr>
                   <tr>
-                    <th scope="row">Instagram</th>
+                    <th scope="row"><AiFillInstagram/>{' '}Instagram</th>
                     <td>3,678</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">75%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="75"
-                            barClassName="bg-gradient-info"
-                          />
-                        </div>
-                      </div>
-                    </td>
+                    <td><ProgressBar striped variant="danger" animated now={30} /></td>
                   </tr>
                   <tr>
-                    <th scope="row">X (Twitter)</th>
+                    <th scope="row"><FaSquareXmark/>{' '}X (Twitter)</th>
                     <td>2,645</td>
-                    <td>
-                      <div className="d-flex align-items-center">
-                        <span className="mr-2">30%</span>
-                        <div>
-                          <Progress
-                            max="100"
-                            value="30"
-                            barClassName="bg-gradient-warning"
-                          />
-                        </div>
-                      </div>
-                    </td>
+                    <td><ProgressBar striped variant="info" animated now={80} /></td>
                   </tr>
                 </tbody>
               </Table>
